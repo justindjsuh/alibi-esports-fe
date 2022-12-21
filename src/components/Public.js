@@ -24,7 +24,7 @@ const Public = () => {
               Velit euismod in pellentesque massa placerat duis ultricies lacus
               sed.
             </p>
-            <Link to={'/'} className="public_card_link">
+            <Link to="/" className="public_card_link">
               <span>READ MORE &rarr;</span>
             </Link>
           </div>
