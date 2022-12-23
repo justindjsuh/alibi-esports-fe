@@ -7,7 +7,7 @@ const Header = () => {
         <Link to="/">
           <div className="header_img">
             {/* <img src="../img/banner_white_mont.png" alt="logo" /> */}
-            <img src="../img/test_logo.png" alt="logo" />
+            <img src="./img/test_logo.png" alt="logo" />
           </div>
         </Link>
 
