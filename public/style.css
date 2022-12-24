@@ -159,14 +159,9 @@ body {
 
 #company_name span:nth-child(6) {
   color: var(--ACCENT-COLOR);
-  text-shadow: 1px 1px 10px var(--ACCENT-COLOR);
-  box-shadow: 0px 0px 10px 1px var(--ACCENT-COLOR);
-  transition: all 0.3s ease-in-out;
-}
-
-#company_name span:nth-child(6):hover {
-  text-shadow: 0px 0px 0px var(--ACCENT-COLOR);
-  box-shadow: 0px 0px 0px 0px var(--ACCENT-COLOR);
+  animation-name: logo_glow_loop;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 #company_name span {
@@ -175,12 +170,118 @@ body {
   margin: 0 0.3rem;
   background: var(--BGCOLOR);
   color: var(--FONT-COLOR);
-  box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease-in-out;
+  /* box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.4); */
+  /* transition: all 0.3s ease-in-out; */
+  /* animation-name: logo_loop;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; */
 }
 
 #company_name span:hover {
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0);
+}
+
+#company_name span:nth-child(1) {
+  animation-name: logo_loop;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+
+#company_name span:nth-child(2) {
+  animation-name: logo_loop;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+#company_name span:nth-child(3) {
+  animation-name: logo_loop;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+#company_name span:nth-child(4) {
+  animation-name: logo_loop;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+#company_name span:nth-child(5) {
+  animation-name: logo_loop;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+#company_name span:nth-child(7) {
+  animation-name: logo_loop;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+
+#company_name span:nth-child(8) {
+  animation-name: logo_loop;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+
+#company_name span:nth-child(9) {
+  animation-name: logo_loop;
+  animation-duration: 2.4s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+#company_name span:nth-child(10) {
+  animation-name: logo_loop;
+  animation-duration: 2.6s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+#company_name span:nth-child(11) {
+  animation-name: logo_loop;
+  animation-duration: 2.8s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+#company_name span:nth-child(12) {
+  animation-name: logo_loop;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+#company_name span:nth-child(13) {
+  animation-name: logo_loop;
+  animation-duration: 3.2s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+
+@keyframes logo_loop {
+  0% {
+    box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes logo_glow_loop {
+  0% {
+    text-shadow: 1px 1px 10px var(--ACCENT-COLOR);
+    box-shadow: 0px 0px 10px 1px var(--ACCENT-COLOR);
+  }
+  50% {
+    text-shadow: 0px 0px 5px var(--ACCENT-COLOR);
+    box-shadow: 0px 0px 5px 0px var(--ACCENT-COLOR);
+  }
+  100% {
+    text-shadow: 1px 1px 10px var(--ACCENT-COLOR);
+    box-shadow: 0px 0px 10px 1px var(--ACCENT-COLOR);
+  }
 }
 
 .public_main_btns {
