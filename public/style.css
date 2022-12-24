@@ -162,6 +162,7 @@ body {
   animation-name: logo_glow_loop;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-delay: -5;
 }
 
 #company_name span {
@@ -171,56 +172,12 @@ body {
   background: var(--BGCOLOR);
   color: var(--FONT-COLOR);
   animation: logo_loop 2s infinite;
+  animation-delay: -5;
 }
 
 /* #company_name span:hover {
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0);
 } */
-
-#company_name span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-#company_name span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-#company_name span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-#company_name span:nth-child(4) {
-  animation-delay: 0.6s;
-}
-#company_name span:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-#company_name span:nth-child(6) {
-  animation-delay: 1s;
-}
-
-#company_name span:nth-child(7) {
-  animation-delay: 1.2s;
-}
-
-#company_name span:nth-child(8) {
-  animation-delay: 1.4s;
-}
-
-#company_name span:nth-child(9) {
-  animation-delay: 1.6s;
-}
-#company_name span:nth-child(10) {
-  animation-delay: 1.8s;
-}
-#company_name span:nth-child(11) {
-  animation-delay: 2s;
-}
-#company_name span:nth-child(12) {
-  animation-delay: 2.2s;
-}
-#company_name span:nth-child(13) {
-  animation-delay: 2.4s;
-}
 
 @keyframes logo_loop {
   0% {
@@ -232,6 +189,51 @@ body {
   100% {
     box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.4);
   }
+}
+
+#company_name span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#company_name span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+#company_name span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+#company_name span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+#company_name span:nth-child(5) {
+  animation-delay: 1s;
+}
+
+#company_name span:nth-child(6) {
+  animation-delay: 1.25s;
+}
+
+#company_name span:nth-child(7) {
+  animation-delay: 1.5s;
+}
+
+#company_name span:nth-child(8) {
+  animation-delay: 1.75s;
+}
+
+#company_name span:nth-child(9) {
+  animation-delay: 2s;
+}
+#company_name span:nth-child(10) {
+  animation-delay: 2.25s;
+}
+#company_name span:nth-child(11) {
+  animation-delay: 2.5;
+}
+#company_name span:nth-child(12) {
+  animation-delay: 2.75s;
+}
+#company_name span:nth-child(13) {
+  animation-delay: 3s;
 }
 
 @keyframes logo_glow_loop {
