@@ -205,7 +205,6 @@ body {
 }
 
 #company_name span:nth-child(1) {
-  background-color: blue;
   animation-delay: 0s;
 }
 
