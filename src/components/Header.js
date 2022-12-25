@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className="header">
-      <div className="header_container">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="2500"
+        className="header_container"
+      >
         <Link to="/">
           <div className="header_img">
             {/* <img src="../img/banner_white_mont.png" alt="logo" /> */}

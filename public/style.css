@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Noto Sans';
 }
 
 html {
@@ -34,13 +34,14 @@ body {
 
 .header_nav {
   display: flex;
-  flex: 1;
-  justify-content: flex-end;
+  /* flex: 1; */
+  justify-content: center;
+  align-items: center;
 }
 
 .header_nav a {
   text-decoration: none;
-  margin: 0.5rem;
+  margin: 1.5rem;
 }
 
 .header_nav p {
@@ -80,17 +81,17 @@ body {
   display: flex;
   align-items: center;
   margin: 0rem;
-  padding: 2rem 6rem;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: var(--BGCOLOR);
+  padding-top: 1rem;
 }
 
 #header_accent_btn p {
   background-color: var(--ACCENT-COLOR);
   color: #252423;
   border-radius: 25px;
-  padding: 0.3rem 0.5rem;
-  margin-left: 0;
+  padding: 0.3rem 0.75rem;
+  margin-left: -0.25rem;
 }
 
 #header_accent_btn p {
@@ -104,13 +105,10 @@ body {
   box-shadow: 0px 0px 10px 5px var(--ACCENT-COLOR);
 }
 
-.header_img {
-  flex: 1;
-}
-
 .header_container img {
   max-width: 35%;
   height: auto;
+  margin: 0 1.5rem;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -152,32 +150,29 @@ body {
 }
 
 #company_name {
-  font-size: 90px;
+  font-size: 100px;
   margin-bottom: 5rem;
   margin-top: 11rem;
 }
 
-#company_name span:nth-child(6) {
+#company_name span:nth-child(n + 1):nth-child(-n + 5) span {
   color: var(--ACCENT-COLOR);
   animation-name: logo_glow_loop;
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
-  animation-delay: -5;
+  animation-delay: -1;
 }
 
-#company_name span {
+#company_name span span {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
-  padding: 0 0.2rem;
+  padding: 0 0.5rem;
   margin: 0 0.3rem;
   background: var(--BGCOLOR);
   color: var(--FONT-COLOR);
-  animation: logo_loop 2s infinite;
-  animation-delay: -5;
+  animation: logo_loop 5s infinite;
+  animation-delay: -1;
 }
-
-/* #company_name span:hover {
-  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0);
-} */
 
 @keyframes logo_loop {
   0% {
@@ -191,63 +186,63 @@ body {
   }
 }
 
-#company_name span:nth-child(1) {
+#company_name span:nth-child(1) span {
   animation-delay: 0s;
 }
 
-#company_name span:nth-child(2) {
-  animation-delay: 0.25s;
+#company_name span:nth-child(2) span {
+  animation-delay: 0.2s;
 }
-#company_name span:nth-child(3) {
-  animation-delay: 0.5s;
+#company_name span:nth-child(3) span {
+  animation-delay: 0.4s;
 }
-#company_name span:nth-child(4) {
-  animation-delay: 0.75s;
+#company_name span:nth-child(4) span {
+  animation-delay: 0.6s;
 }
-#company_name span:nth-child(5) {
+#company_name span:nth-child(5) span {
+  animation-delay: 0.8s;
+}
+
+#company_name span:nth-child(6) span {
   animation-delay: 1s;
 }
 
-#company_name span:nth-child(6) {
-  animation-delay: 1.25s;
+#company_name span:nth-child(7) span {
+  animation-delay: 1.2s;
 }
 
-#company_name span:nth-child(7) {
-  animation-delay: 1.5s;
+#company_name span:nth-child(8) span {
+  animation-delay: 1.4s;
 }
 
-#company_name span:nth-child(8) {
-  animation-delay: 1.75s;
+#company_name span:nth-child(9) span {
+  animation-delay: 1.6s;
 }
-
-#company_name span:nth-child(9) {
+#company_name span:nth-child(10) span {
+  animation-delay: 1.8s;
+}
+#company_name span:nth-child(11) span {
   animation-delay: 2s;
 }
-#company_name span:nth-child(10) {
-  animation-delay: 2.25s;
+#company_name span:nth-child(12) span {
+  animation-delay: 2.2s;
 }
-#company_name span:nth-child(11) {
-  animation-delay: 2.5;
-}
-#company_name span:nth-child(12) {
-  animation-delay: 2.75s;
-}
-#company_name span:nth-child(13) {
-  animation-delay: 3s;
+#company_name span:nth-child(13) span {
+  animation-delay: 2.4s;
 }
 
 @keyframes logo_glow_loop {
   0% {
-    text-shadow: 1px 1px 10px var(--ACCENT-COLOR);
-    box-shadow: 0px 0px 10px 1px var(--ACCENT-COLOR);
+    text-shadow: 1px 1px 15px var(--ACCENT-COLOR);
+    box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.4);
   }
   50% {
-    text-shadow: 0px 0px 5px var(--ACCENT-COLOR);
-    box-shadow: 0px 0px 5px 0px var(--ACCENT-COLOR);
+    text-shadow: 0px 0px 2px var(--ACCENT-COLOR);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
   }
   100% {
-    text-shadow: 1px 1px 10px var(--ACCENT-COLOR);
-    box-shadow: 0px 0px 10px 1px var(--ACCENT-COLOR);
+    text-shadow: 1px 1px 15px var(--ACCENT-COLOR);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -318,30 +313,33 @@ body {
 .public_section_1 {
   background-color: #2f2f2f;
   min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1_info {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
 }
 
 .who_we_are {
-  padding-left: 10rem;
-  padding-top: 5rem;
+  padding-top: 3rem;
   margin: 0;
-  position: relative;
   width: 100%;
-  display: flex;
-  flex-flow: column;
 }
 
 .mission_statement {
-  padding-left: 10rem;
   padding-bottom: 5rem;
   margin: 0;
-  position: relative;
   width: 100%;
-  display: flex;
-  flex-flow: column;
 }
 
 .section1_title {
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 600;
 }
 
@@ -363,14 +361,20 @@ hr {
  */
 
 .public_section_2 {
-  padding: 1rem 0 2rem 5rem;
-  margin: 0;
   position: relative;
   background-color: #181818;
   width: 100%;
   min-height: 60vh;
   display: flex;
+  justify-content: center;
   flex-flow: column;
+}
+
+.section2_info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .founder_name {
@@ -379,25 +383,37 @@ hr {
 }
 
 .section_meet_the_team {
-  font-size: 34px;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  font-size: 40px;
   font-weight: 600;
+}
+
+.section_meet_the_team p {
+  text-align: center;
+  margin-top: 0;
 }
 
 .public_meet_the_team {
   display: flex;
+  flex-flow: column;
+  align-items: center;
   background-color: #252423;
-  width: 75%;
-  padding: 1rem;
-  margin: 1rem 0;
+  margin: 0 2rem;
+  width: 15%;
+  padding: 2rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  box-shadow: 5px 7px 15px 0 rgba(0, 0, 0, 0.3);
 }
 
 .public_meet_the_team img {
-  width: 25%;
+  width: 45%;
   height: auto;
 }
 
 .founder_content {
-  width: 90%;
+  width: 100%;
   margin: 0 1.5rem;
 }
 
@@ -414,8 +430,7 @@ hr {
 }
 
 .section3_title {
-  /* padding-left: 5rem; */
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 600;
 }
 

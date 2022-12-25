@@ -1,18 +1,10 @@
 const SectionFour = () => {
   return (
     <div className="public_section_4">
-      <div
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        className="section4_title"
-      >
+      <div className="section4_title">
         <p>Section 4</p>
       </div>
-      <div
-        data-aos="fade-right"
-        data-aos-duration="1500"
-        className="section4_desc"
-      >
+      <div className="section4_desc">
         <hr />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

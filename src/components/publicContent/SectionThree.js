@@ -9,18 +9,10 @@ const SectionThree = () => {
 
   return (
     <div className="public_section_3">
-      <div
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        className="section3_title"
-      >
+      <div className="section3_title">
         <p>NAVIGATING THE ESPORTS LANDSCAPE</p>
       </div>
-      <div
-        data-aos="fade-right"
-        data-aos-duration="1500"
-        className="section3_desc"
-      >
+      <div className="section3_desc">
         <hr />
         <p>
           As gaming becomes more popular the people and its community have grown
@@ -31,7 +23,7 @@ const SectionThree = () => {
           <br></br> Here is a quick look at what we do!
         </p>
       </div>
-      <div data-aos="fade-right" data-aos-duration="1500">
+      <div>
         <TimelineObserver
           initialColor="#e5e5e5"
           fillColor="#27afc7"
