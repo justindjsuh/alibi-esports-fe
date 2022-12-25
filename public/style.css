@@ -155,7 +155,27 @@ body {
   margin-top: 11rem;
 }
 
-#company_name span:nth-child(n + 1):nth-child(-n + 5) span {
+#company_name span:nth-child(n + 1):nth-child(-n + 5) {
+  color: var(--ACCENT-COLOR);
+  animation-name: logo_glow_loop;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: -1;
+}
+
+#company_name span {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 0 0.5rem;
+  margin: 0 0.3rem;
+  background: var(--BGCOLOR);
+  color: var(--FONT-COLOR);
+  animation: logo_loop 5s infinite;
+  animation-delay: -1;
+}
+
+/* FOR DEV ENVIRONMENT */
+/* #company_name span:nth-child(n + 1):nth-child(-n + 5) span {
   color: var(--ACCENT-COLOR);
   animation-name: logo_glow_loop;
   animation-duration: 5s;
@@ -172,7 +192,7 @@ body {
   color: var(--FONT-COLOR);
   animation: logo_loop 5s infinite;
   animation-delay: -1;
-}
+} */
 
 @keyframes logo_loop {
   0% {
