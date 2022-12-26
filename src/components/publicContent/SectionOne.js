@@ -44,7 +44,7 @@ const SectionOne = () => {
             data-aos-duration="1000"
             className="section1_title"
           >
-            <p>OUR MISSION STATEMENT</p>
+            <p>OUR MISSION</p>
           </div>
 
           <div
@@ -54,8 +54,8 @@ const SectionOne = () => {
           >
             <hr />
             <p>
-              Our mission is to make e-sports more accessible to those getting
-              their feet wet with their competitive journey, and to provide an
+              We want to make e-sports more accessible to those getting their
+              feet wet with their competitive journey, and to provide an
               opportunity of competitive growth to those who already have a
               career built out. We strive to build gaming communities and host
               tournaments where anyone who has a passion for gaming can connect

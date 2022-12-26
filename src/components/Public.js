@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import SectionOne from './publicContent/SectionOne';
 import SectionTwo from './publicContent/SectionTwo';
 import SectionThree from './publicContent/SectionThree';
-import SectionFour from './publicContent/SectionFour';
 
 const Public = () => {
   const [letters, setLetters] = useState('ALIBI ESPORTS');
@@ -42,7 +41,7 @@ const Public = () => {
                 <p>
                   "Here at Alibi Esports we strive to reach communities where
                   competitive scenes may not exist. This way we can provide an
-                  opportunity for competitive growth and a community to a broad
+                  opportunity for competitive growth and a community to a wide
                   range of players."
                 </p>
                 <p>- Ryan Won (Founder)</p>
@@ -64,7 +63,6 @@ const Public = () => {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
-      <SectionFour />
     </div>
   );
 };
