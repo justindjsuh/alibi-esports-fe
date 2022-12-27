@@ -9,13 +9,14 @@ const SectionTwo = () => {
           <img src="../img/logo_square.png" alt="val_logo" />
           <div className="founder_content">
             <p className="founder_name">Ryan Won</p>
-            <hr />
+            {/* <hr /> */}
+            {/* future animation: hover reveal more info when we add descriptions */}
             <p className="founder_desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Facilisis leo vel fringilla est ullamcorper eget nulla facilisi
               etiam. Cras adipiscing enim eu turpis egestas pretium aenean
-              pharetra.
+              pharetra. */}
             </p>
           </div>
         </div>
@@ -23,13 +24,13 @@ const SectionTwo = () => {
           <img src="../img/logo_square.png" alt="val_logo" />
           <div className="founder_content">
             <p className="founder_name">Justin Suh</p>
-            <hr />
+            {/* <hr /> */}
             <p className="founder_desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Facilisis leo vel fringilla est ullamcorper eget nulla facilisi
               etiam. Cras adipiscing enim eu turpis egestas pretium aenean
-              pharetra.
+              pharetra. */}
             </p>
           </div>
         </div>
@@ -37,13 +38,13 @@ const SectionTwo = () => {
           <img src="../img/logo_square.png" alt="val_logo" />
           <div className="founder_content">
             <p className="founder_name">Gloria Choi</p>
-            <hr />
+            {/* <hr /> */}
             <p className="founder_desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Facilisis leo vel fringilla est ullamcorper eget nulla facilisi
               etiam. Cras adipiscing enim eu turpis egestas pretium aenean
-              pharetra.
+              pharetra. */}
             </p>
           </div>
         </div>

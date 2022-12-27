@@ -1,18 +1,20 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
 
+import Layout from './components/Layout';
+import Form from './features/form/Form';
 import Public from './components/Public';
-import PlayersList from './features/players/PlayersList';
-import TeamsList from './features/teams/TeamsList';
+// import PlayersList from './features/players/PlayersList';
+// import TeamsList from './features/teams/TeamsList';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Public />} />
-        <Route path="/players" element={<PlayersList />} />
-        <Route path="/teams" element={<TeamsList />} />
+      </Route>
+      <Route path="/signup" element={<Layout />}>
+        <Route index element={<Form />} />
       </Route>
     </Routes>
   );

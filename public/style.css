@@ -15,6 +15,10 @@ html {
   --HEAD-FOOT-COLOR: #252423;
   --ACCENT-COLOR: #27afc7;
   --OFF-WHITE: rgba(231, 231, 231, 0.9);
+  --INPUT-BG: rgb(36, 36, 36);
+  --INPUT-BORDER: rgb(26, 26, 26);
+  --FORM-BG: rgb(41, 42, 43);
+  --FORM-FONT: rgb(175, 175, 175);
 }
 
 body {
@@ -156,7 +160,7 @@ body {
 }
 
 /* PRODUCTION ENVIRONMENT */
-#company_name span:nth-child(n + 1):nth-child(-n + 5) {
+/* #company_name span:nth-child(n + 1):nth-child(-n + 5) {
   color: var(--ACCENT-COLOR);
   animation-name: logo_glow_loop;
   animation-duration: 5s;
@@ -171,10 +175,10 @@ body {
   background: var(--BGCOLOR);
   color: var(--FONT-COLOR);
   animation: logo_loop 5s infinite;
-}
+} */
 
 /* FOR DEV ENVIRONMENT */
-/* #company_name span:nth-child(n + 1):nth-child(-n + 5) span {
+#company_name span:nth-child(n + 1):nth-child(-n + 5) span {
   color: var(--ACCENT-COLOR);
   animation-name: logo_glow_loop;
   animation-duration: 5s;
@@ -191,7 +195,7 @@ body {
   color: var(--FONT-COLOR);
   animation: logo_loop 5s infinite;
   animation-delay: -1;
-} */
+}
 
 @keyframes logo_loop {
   0% {
@@ -206,7 +210,7 @@ body {
 }
 
 /* PRODUCTION ENVIRONMENT */
-#company_name span:nth-child(1) {
+/* #company_name span:nth-child(1) {
   animation-delay: 0s;
 }
 
@@ -249,10 +253,10 @@ body {
 }
 #company_name span:nth-child(13) {
   animation-delay: 2.4s;
-}
+} */
 
 /* FOR DEV ENVIRONMENT */
-/* #company_name span:nth-child(1) span {
+#company_name span:nth-child(1) span {
   animation-delay: 0s;
 }
 
@@ -295,7 +299,7 @@ body {
 }
 #company_name span:nth-child(13) span {
   animation-delay: 2.4s;
-} */
+}
 
 @keyframes logo_glow_loop {
   0% {
@@ -467,14 +471,14 @@ hr {
   background-color: #252423;
   margin: 0 2rem;
   width: 20%;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   margin-bottom: 8rem;
   text-align: center;
   box-shadow: 5px 7px 15px 0 rgba(0, 0, 0, 0.3);
 }
 
 .public_meet_the_team img {
-  width: 45%;
+  width: 85%;
   height: auto;
 }
 
@@ -533,91 +537,6 @@ hr {
   display: flex;
   margin: 1rem;
 }
-/* 
-.timeline_section_animation::before {
-  content: '';
-  position: absolute;
-
-  width: 0;
-  height: 0;
-  background: transparent;
-  border: 2px solid transparent;
-}
-
-.timeline_section_animation::before {
-  animation: animate 3s linear forwards;
-}
-
-@keyframes animate {
-  0% {
-    width: 0;
-    height: 0;
-    border-top-color: rgba(39, 175, 199, 0.8);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-
-  50% {
-    width: 100%;
-    height: 0;
-    border-top-color: rgba(39, 175, 199, 0.8);
-    border-right-color: rgba(39, 175, 199, 0.8);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-
-  100% {
-    width: 100%;
-    height: 100%;
-    border-top-color: rgba(39, 175, 199, 0.8);
-    border-right-color: rgba(39, 175, 199, 0.8);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-}
-
-.timeline_section_animation::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  background: transparent;
-  border: 2px solid transparent;
-}
-
-.timeline_section_animation::after {
-  animation: animates 3s linear forwards;
-}
-
-@keyframes animates {
-  0% {
-    width: 0;
-    height: 0;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: var(--ACCENT-COLOR);
-  }
-
-  50% {
-    width: 0;
-    height: 100%;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: var(--ACCENT-COLOR);
-    border-left-color: var(--ACCENT-COLOR);
-  }
-
-  100% {
-    width: 100%;
-    height: 100%;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: var(--ACCENT-COLOR);
-    border-left-color: var(--ACCENT-COLOR);
-  }
-} */
 
 .timeline_title {
   display: flex;
@@ -750,4 +669,250 @@ hr {
 
 .arrows:hover {
   cursor: pointer;
+}
+
+/*
+ *
+ * FORM
+ *
+ */
+
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.player_form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-self: center;
+  margin: 1rem 2rem;
+  padding: 2rem;
+  background-color: rgb(31, 30, 29);
+  width: 60%;
+  /* box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.form_header {
+  border-bottom: 2px solid var(--ACCENT-COLOR);
+}
+
+.form_header p {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.form_content_title {
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  font-size: 24px;
+  text-align: left;
+  cursor: pointer;
+  color: var(--FONT-COLOR);
+  background-color: rgb(47, 47, 47);
+  border: none;
+  border-bottom: 4px solid rgb(255, 144, 132);
+}
+
+.form_content_container {
+  margin: 1rem 0;
+  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form_content_collapsible {
+  background-color: rgb(51, 51, 51);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.form_content {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Temp */
+.active,
+.form_content_title:hover {
+  background-color: rgb(37, 36, 35);
+}
+
+.form_content input {
+  padding: 0.5rem;
+  margin: 0.1rem 1rem 1rem 1rem;
+  font-size: 20px;
+  color: var(--FONT-COLOR);
+  background: rgb(31, 30, 29);
+  border: 1px solid var(--INPUT-BORDER);
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.form_content input:focus {
+  outline: none;
+  background-color: hsl(0, 7%, 20%);
+}
+
+.input_area {
+  display: flex;
+  flex-flow: column;
+}
+
+.input_area label {
+  margin-left: 1rem;
+  font-size: 18px;
+  color: lightgray;
+}
+
+/* checkboxes */
+.checkbox_container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.563rem;
+  width: 1.563rem;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container .checkmark:after {
+  left: 0.563rem;
+  top: 0.313rem;
+  width: 0.313rem;
+  height: 0.625rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.submit_btn {
+  align-self: flex-end;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  margin-top: 2rem;
+  border: none;
+  background-color: var(--ACCENT-COLOR);
+  border-radius: 25px;
+  color: var(--BGCOLOR);
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.1s ease-in-out;
+}
+
+.submit_btn:hover {
+  cursor: pointer;
+  background-color: var(--BGCOLOR);
+  color: var(--ACCENT-COLOR);
+  box-shadow: 0px 0px 10px 2px var(--ACCENT-COLOR);
+}
+
+.submit_btn_disabled {
+  align-self: flex-end;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  margin-top: 2rem;
+  border: none;
+  background-color: #3d3d3d;
+  border-radius: 25px;
+  color: var(--BGCOLOR);
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.complete {
+  border-bottom: 4px solid rgb(74, 218, 146);
+  background-color: #252423;
+}
+
+.section_save_btn {
+  margin: 0 2rem 2rem 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--ACCENT-COLOR);
+  border-radius: 25px;
+  color: var(--BGCOLOR);
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.1s linear;
+}
+
+.section_save_btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.form_content .input_error {
+  border-bottom: 2px solid rgb(255, 144, 132);
+  transition: 0.1s;
+  animation: animate_error_border linear;
+}
+
+@keyframes animate_error_border {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 50%;
+    height: 0;
+  }
+  100% {
+    width: 100%;
+    height: 0;
+  }
 }
