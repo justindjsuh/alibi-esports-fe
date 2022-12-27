@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {
+  createTeam,
   addCaptain,
   addPlayer2,
   addPlayer3,
@@ -141,6 +142,7 @@ const PlayerForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(createTeam({ teamName }));
     dispatch(
       addCaptain({
         captainFName,
@@ -155,6 +157,7 @@ const PlayerForm = () => {
     dispatch(addPlayer3({ p3FName, p3LName, p3InGameName, p3Rank, teamName }));
     dispatch(addPlayer4({ p4FName, p4LName, p4InGameName, p4Rank, teamName }));
     dispatch(addPlayer5({ p5FName, p5LName, p5InGameName, p5Rank, teamName }));
+    setIsSubmitted(true);
   };
 
   useEffect(() => {
@@ -516,9 +519,14 @@ const PlayerForm = () => {
       </a>
       <div className="checkbox_container">
         <label onChange={handleCheck}>
-          I have read the waiver form above in its entirety, and I voluntarily
-          accept the terms of the waiver by marking this checkbox, and warrant
-          that I fully understand its contents.
+          I hereby represent that I am eighteen (18) years of age or older and I
+          am competent to contract in my own name. You represent that you are at
+          least 18 years of age, and if you live in another state or country,
+          you are of the age necessary to enter into contracts according to the
+          laws of your home state or country.I have read the waiver form above
+          in its entirety, and I voluntarily accept the terms of the waiver by
+          marking this checkbox, and warrant that I fully understand its
+          contents.
           <input type="checkbox" name="waiver" required></input>
           <span className="checkmark"></span>
         </label>

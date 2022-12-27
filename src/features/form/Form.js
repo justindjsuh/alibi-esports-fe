@@ -9,10 +9,10 @@ const Form = () => {
         </div>
         <p>
           Please note that by completing this registration, you are committing
-          yourself and your team to participate in the Alibi Esports
-          Invitational on January 5th at 5 p.m - 10 p.m. and January 6th at 5
-          p.m. - 12 a.m. If you do not respect this commitment, the organization
-          may blacklist you for future opportunities.<br></br> <br></br>
+          yourself and your team to participate in the Alibi Invitational on
+          January 5th at 5 p.m - 10 p.m. and January 6th at 5 p.m. - 12 a.m. If
+          you do not respect this commitment, the organization may blacklist you
+          for future opportunities.<br></br> <br></br>
           Registrations will be available until January 3rd at 8 p.m. <br></br>
           The Invitational will be streamed on our twitch channel:
           <a
