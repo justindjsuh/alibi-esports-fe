@@ -1,4 +1,13 @@
 import { useRef, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import {
+  addCaptain,
+  addPlayer2,
+  addPlayer3,
+  addPlayer4,
+  addPlayer5,
+} from './formSlice';
 
 const PlayerForm = () => {
   const [captainFName, setCaptainFName] = useState('');
@@ -41,6 +50,8 @@ const PlayerForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const ref = useRef([]);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleCaptainSectionSave = (e) => {
     e.preventDefault();
@@ -55,61 +66,68 @@ const PlayerForm = () => {
       setCapCompletion(true);
     } else {
       setCapCompletion(false);
-      if (!captainFName) {
-        setCaptainFName(null);
-      }
-      if (!captainLName) {
-        setCaptainLName(null);
-      }
-      if (!captainInGameName) {
-        setCaptainInGameName(null);
-      }
-      if (!captainRank) {
-        setCaptainRank(null);
-      }
-      if (!captainDiscord) {
-        setCaptainDiscord(null);
-      }
-      if (!teamName) {
-        setTeamName(null);
-      }
+      if (!captainFName) setCaptainFName(null);
+      if (!captainLName) setCaptainLName(null);
+      if (!captainInGameName) setCaptainInGameName(null);
+      if (!captainRank) setCaptainRank(null);
+      if (!captainDiscord) setCaptainDiscord(null);
+      if (!teamName) setTeamName(null);
     }
   };
 
-  const handleSubmit = (e) => {
-    console.log(
-      'cap:\n',
-      capCompletion,
-      '\np2:\n',
-      p2Completion,
-      '\np3:\n',
-      p3Completion,
-      '\np4:\n',
-      p4Completion,
-      '\np5:\n',
-      p5Completion
-    );
+  const handlePlayer2SectionSave = (e) => {
     e.preventDefault();
-    console.log(e);
-  };
-
-  useEffect(() => {
     if (p2FName && p2LName && p2InGameName && p2Rank) {
       setP2Completion(true);
+    } else {
+      setP2Completion(false);
+      if (!p2FName) setP2FName(null);
+      if (!p2LName) setP2LName(null);
+      if (!p2InGameName) setP2InGameName(null);
+      if (!p2Rank) setP2Rank(null);
     }
+  };
 
+  const handlePlayer3SectionSave = (e) => {
+    e.preventDefault();
     if (p3FName && p3LName && p3InGameName && p3Rank) {
       setP3Completion(true);
+    } else {
+      setP3Completion(false);
+      if (!p3FName) setP3FName(null);
+      if (!p3LName) setP3LName(null);
+      if (!p3InGameName) setP3InGameName(null);
+      if (!p3Rank) setP3Rank(null);
     }
+  };
 
+  const handlePlayer4SectionSave = (e) => {
+    e.preventDefault();
     if (p4FName && p4LName && p4InGameName && p4Rank) {
       setP4Completion(true);
+    } else {
+      setP4Completion(false);
+      if (!p4FName) setP4FName(null);
+      if (!p4LName) setP4LName(null);
+      if (!p4InGameName) setP4InGameName(null);
+      if (!p4Rank) setP4Rank(null);
     }
+  };
 
+  const handlePlayer5SectionSave = (e) => {
+    e.preventDefault();
     if (p5FName && p5LName && p5InGameName && p5Rank) {
       setP5Completion(true);
+    } else {
+      setP5Completion(false);
+      if (!p5FName) setP5FName(null);
+      if (!p5LName) setP5LName(null);
+      if (!p5InGameName) setP5InGameName(null);
+      if (!p5Rank) setP5Rank(null);
     }
+  };
 
+  const handleCheck = () => {
     if (
       capCompletion &&
       p2Completion &&
@@ -118,8 +136,28 @@ const PlayerForm = () => {
       p5Completion
     ) {
       setFormCompletion(true);
-    }
+    } else setFormCompletion(false);
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(
+      addCaptain({
+        captainFName,
+        captainLName,
+        captainInGameName,
+        captainRank,
+        captainDiscord,
+        teamName,
+      })
+    );
+    dispatch(addPlayer2({ p2FName, p2LName, p2InGameName, p2Rank }));
+    dispatch(addPlayer3({ p3FName, p3LName, p3InGameName, p3Rank }));
+    dispatch(addPlayer4({ p4FName, p4LName, p4InGameName, p4Rank }));
+    dispatch(addPlayer5({ p5FName, p5LName, p5InGameName, p5Rank }));
+  };
+
+  useEffect(() => {
     const handleClick = (event) => {
       event.target.classList.toggle('active');
       const content = event.target.nextElementSibling;
@@ -140,10 +178,10 @@ const PlayerForm = () => {
         element.forEach((el) => el.removeEventListener('click', handleClick));
       } else return;
     };
-  });
+  }, []);
 
   return (
-    <>
+    <form className="form" onSubmit={handleSubmit}>
       <div className="form_content_container form_content_captain">
         <button
           ref={(el) => (ref.current[0] = el)}
@@ -154,228 +192,333 @@ const PlayerForm = () => {
           Captain
         </button>
         <div className="form_content_collapsible">
-          <form className="captain_form" onSubmit={handleCaptainSectionSave}>
-            <div className="form_content">
-              <div className="input_area">
-                <label htmlFor="fname">First Name</label>
-                <input
-                  className={`${captainFName === null ? 'input_error' : ''}`}
-                  type="text"
-                  placeholder="First Name"
-                  name="fname"
-                  onChange={(e) => setCaptainFName(e.target.value)}
-                />
-              </div>
-              <div className="input_area">
-                <label htmlFor="lname">Last Name</label>
-                <input
-                  className={`${captainLName === null ? 'input_error' : ''}`}
-                  type="text"
-                  placeholder="Last Name"
-                  name="lname"
-                  onChange={(e) => setCaptainLName(e.target.value)}
-                />
-              </div>
-              <div className="input_area">
-                <label htmlFor="ign">IGN</label>
-                <input
-                  className={`${
-                    captainInGameName === null ? 'input_error' : ''
-                  }`}
-                  type="text"
-                  placeholder="IGN"
-                  name="ign"
-                  onChange={(e) => setCaptainInGameName(e.target.value)}
-                />
-              </div>
-              <div className="input_area">
-                <label htmlFor="rank">Rank</label>
-                <input
-                  className={`${captainRank === null ? 'input_error' : ''}`}
-                  type="text"
-                  placeholder="Rank"
-                  name="rank"
-                  onChange={(e) => setCaptainRank(e.target.value)}
-                />
-              </div>
-              <div className="input_area">
-                <label htmlFor="discord">Discord</label>
-                <input
-                  className={`${captainDiscord === null ? 'input_error' : ''}`}
-                  type="text"
-                  placeholder="Discord (username#0000)"
-                  name="discord"
-                  onChange={(e) => setCaptainDiscord(e.target.value)}
-                />
-              </div>{' '}
-              <div className="input_area">
-                <label htmlFor="teamName">Team Name</label>
-                <input
-                  className={`${teamName === null ? 'input_error' : ''}`}
-                  type="text"
-                  placeholder="Team Name"
-                  name="teamName"
-                  onChange={(e) => setTeamName(e.target.value)}
-                />
-              </div>
+          <div className="form_content">
+            <div className="input_area">
+              <label htmlFor="fname">First Name</label>
+              <input
+                className={`${captainFName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="First Name"
+                name="fname"
+                onChange={(e) => setCaptainFName(e.target.value)}
+              />
             </div>
-            <button className="section_save_btn">SAVE</button>
-          </form>
+            <div className="input_area">
+              <label htmlFor="lname">Last Name</label>
+              <input
+                className={`${captainLName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Last Name"
+                name="lname"
+                onChange={(e) => setCaptainLName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="ign">IGN</label>
+              <input
+                className={`${captainInGameName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="IGN"
+                name="ign"
+                onChange={(e) => setCaptainInGameName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="rank">Rank</label>
+              <input
+                className={`${captainRank === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Rank"
+                name="rank"
+                onChange={(e) => setCaptainRank(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="discord">Discord</label>
+              <input
+                className={`${captainDiscord === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Discord (username#0000)"
+                name="discord"
+                onChange={(e) => setCaptainDiscord(e.target.value)}
+              />
+            </div>{' '}
+            <div className="input_area">
+              <label htmlFor="teamName">Team Name</label>
+              <input
+                className={`${teamName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Team Name"
+                name="teamName"
+                onChange={(e) => setTeamName(e.target.value)}
+              />
+            </div>
+          </div>
+          <button
+            className="section_save_btn"
+            onClick={handleCaptainSectionSave}
+          >
+            SAVE
+          </button>
         </div>
       </div>
       {/* PLAYER 2 */}
       <div className="form_content_container form_content_player2">
         <button
           ref={(el) => (ref.current[1] = el)}
-          className={`form_content_title `}
+          className={`form_content_title ${
+            p2Completion ? 'complete active' : ''
+          }`}
         >
           Player 2
         </button>
         <div className="form_content_collapsible">
           <div className="form_content">
-            <input
-              type="text"
-              placeholder="First Name"
-              name="fname"
-              onChange={(e) => setP2FName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              name="lname"
-              onChange={(e) => setP2LName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="IGN"
-              name="ign"
-              onChange={(e) => setP2InGameName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Rank"
-              name="rank"
-              onChange={(e) => setP2Rank(e.target.value)}
-            />
+            <div className="input_area">
+              <label htmlFor="fname">First Name</label>
+              <input
+                className={`${p2FName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="First Name"
+                name="fname"
+                onChange={(e) => setP2FName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="lname">Last Name</label>
+              <input
+                className={`${p2LName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Last Name"
+                name="lname"
+                onChange={(e) => setP2LName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="ign">IGN</label>
+              <input
+                className={`${p2InGameName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="IGN"
+                name="ign"
+                onChange={(e) => setP2InGameName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="rank">Rank</label>
+              <input
+                className={`${p2Rank === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Rank"
+                name="rank"
+                onChange={(e) => setP2Rank(e.target.value)}
+              />
+            </div>
           </div>
+          <button
+            className="section_save_btn"
+            onClick={handlePlayer2SectionSave}
+          >
+            SAVE
+          </button>
         </div>
       </div>
       {/* PLAYER 3 */}
       <div className="form_content_container form_content_player3">
         <button
           ref={(el) => (ref.current[2] = el)}
-          className={`form_content_title `}
+          className={`form_content_title ${
+            p3Completion ? 'complete active' : ''
+          }`}
         >
           Player 3
         </button>
         <div className="form_content_collapsible">
           <div className="form_content">
-            <input
-              type="text"
-              placeholder="First Name"
-              name="fname"
-              onChange={(e) => setP3FName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              name="lname"
-              onChange={(e) => setP3LName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="IGN"
-              name="ign"
-              onChange={(e) => setP3InGameName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Rank"
-              name="rank"
-              onChange={(e) => setP3Rank(e.target.value)}
-            />
+            <div className="input_area">
+              <label htmlFor="fname">First Name</label>
+              <input
+                className={`${p3FName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="First Name"
+                name="fname"
+                onChange={(e) => setP3FName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="lname">Last Name</label>
+              <input
+                className={`${p3LName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Last Name"
+                name="lname"
+                onChange={(e) => setP3LName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="ign">IGN</label>
+              <input
+                className={`${p3InGameName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="IGN"
+                name="ign"
+                onChange={(e) => setP3InGameName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="rank">Rank</label>
+              <input
+                className={`${p3Rank === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Rank"
+                name="rank"
+                onChange={(e) => setP3Rank(e.target.value)}
+              />
+            </div>
           </div>
+          <button
+            className="section_save_btn"
+            onClick={handlePlayer3SectionSave}
+          >
+            SAVE
+          </button>
         </div>
       </div>
       {/* PLAYER 4 */}
       <div className="form_content_container form_content_player4">
         <button
           ref={(el) => (ref.current[3] = el)}
-          className={`form_content_title `}
+          className={`form_content_title ${
+            p4Completion ? 'complete active' : ''
+          }`}
         >
           Player 4
         </button>
         <div className="form_content_collapsible">
           <div className="form_content">
-            <input
-              type="text"
-              placeholder="First Name"
-              name="fname"
-              onChange={(e) => setP4FName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              name="lname"
-              onChange={(e) => setP4LName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="IGN"
-              name="ign"
-              onChange={(e) => setP4InGameName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Rank"
-              name="rank"
-              onChange={(e) => setP4Rank(e.target.value)}
-            />
+            <div className="input_area">
+              <label htmlFor="fname">First Name</label>
+              <input
+                className={`${p4FName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="First Name"
+                name="fname"
+                onChange={(e) => setP4FName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="lname">Last Name</label>
+              <input
+                className={`${p4LName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Last Name"
+                name="lname"
+                onChange={(e) => setP4LName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="ign">IGN</label>
+              <input
+                className={`${p4InGameName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="IGN"
+                name="ign"
+                onChange={(e) => setP4InGameName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="rank">Rank</label>
+              <input
+                className={`${p4Rank === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Rank"
+                name="rank"
+                onChange={(e) => setP4Rank(e.target.value)}
+              />
+            </div>
           </div>
+          <button
+            className="section_save_btn"
+            onClick={handlePlayer4SectionSave}
+          >
+            SAVE
+          </button>
         </div>
       </div>
       {/* PLAYER 5 */}
       <div className="form_content_container form_content_player5">
         <button
           ref={(el) => (ref.current[4] = el)}
-          className={`form_content_title `}
+          className={`form_content_title ${
+            p5Completion ? 'complete active' : ''
+          }`}
         >
           Player 5
         </button>
         <div className="form_content_collapsible">
           <div className="form_content">
-            <input
-              type="text"
-              placeholder="First Name"
-              name="fname"
-              onChange={(e) => setP5FName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              name="lname"
-              onChange={(e) => setP5LName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="IGN"
-              name="ign"
-              onChange={(e) => setP5InGameName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Rank"
-              name="rank"
-              onChange={(e) => setP5Rank(e.target.value)}
-            />
+            <div className="input_area">
+              <label htmlFor="fname">First Name</label>
+              <input
+                className={`${p5FName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="First Name"
+                name="fname"
+                onChange={(e) => setP5FName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="lname">Last Name</label>
+              <input
+                className={`${p5LName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Last Name"
+                name="lname"
+                onChange={(e) => setP5LName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="ign">IGN</label>
+              <input
+                className={`${p5InGameName === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="IGN"
+                name="ign"
+                onChange={(e) => setP5InGameName(e.target.value)}
+              />
+            </div>
+            <div className="input_area">
+              <label htmlFor="rank">Rank</label>
+              <input
+                className={`${p5Rank === null ? 'input_error' : ''}`}
+                type="text"
+                placeholder="Rank"
+                name="rank"
+                onChange={(e) => setP5Rank(e.target.value)}
+              />
+            </div>
           </div>
+          <button
+            className="section_save_btn"
+            onClick={handlePlayer5SectionSave}
+          >
+            SAVE
+          </button>
         </div>
       </div>
+      <p>
+        Please send this waiver to your team and review it in its entirety so
+        you may accept the terms on behalf of yourself and your four other team
+        members as well.
+      </p>
+      <a href="" target="_blank" rel="noopener noreferrer">
+        WAIVER FORM
+      </a>
       <div className="checkbox_container">
-        <label>
-          I have read this waiver form in its entirety, and I voluntarily accept
-          the terms of the waiver by marking this checkbox, and warrant that I
-          fully understand its contents.
+        <label onChange={handleCheck}>
+          I have read the waiver form above in its entirety, and I voluntarily
+          accept the terms of the waiver by marking this checkbox, and warrant
+          that I fully understand its contents.
           <input type="checkbox" name="waiver" required></input>
           <span className="checkmark"></span>
         </label>
@@ -388,7 +531,7 @@ const PlayerForm = () => {
       >
         SUBMIT
       </button>
-    </>
+    </form>
   );
 };
 

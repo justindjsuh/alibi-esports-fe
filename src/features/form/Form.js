@@ -15,7 +15,11 @@ const Form = () => {
           may blacklist you for future opportunities.<br></br> <br></br>
           Registrations will be available until January 3rd at 8 p.m. <br></br>
           The Invitational will be streamed on our twitch channel:
-          <a href="https://www.twitch.tv/alibiesports">
+          <a
+            href="https://www.twitch.tv/alibiesports"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {' '}
             https://www.twitch.tv/alibiesports
           </a>
@@ -30,21 +34,33 @@ const Form = () => {
           Discord name change, change in roster, etc.)
           <br></br>
           DON'T FORGET TO JOIN OUR DISCORD SERVER:{' '}
-          <a href="https://discord.gg/GPyFsyJ7Nn">
+          <a
+            href="https://discord.gg/GPyFsyJ7Nn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {' '}
             https://discord.gg/GPyFsyJ7Nn
           </a>
-          <br></br> It is not required by any means. However, we'll be able to
-          assist you and your team best if you are in our discord.
+          <br></br> It is not required by any means. However, should issues
+          arise, we'll be able to assist you and your team best if you are in
+          our discord.
           <br></br>
           <br></br>If you any further questions, please reach out to an admin
           via our Discord, or contact us at help.alibiesports@gmail.com{' '}
-          <br></br>This competition is not affiliated with or sponsored by Riot
-          Games, Inc. or VALORANT Esports.
+          <br></br>
+          <strong>
+            This competition is not affiliated with or sponsored by Riot Games,
+            Inc. or VALORANT Esports.
+          </strong>
         </p>
         <div className="form_header">
           <p>Team Information</p>
         </div>
+        <p>
+          Please be sure to SAVE after you complete a player's form AND whenever
+          you make a change to a field!
+        </p>
         <PlayerForm />
       </div>
     </div>

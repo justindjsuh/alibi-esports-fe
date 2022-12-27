@@ -19,6 +19,8 @@ html {
   --INPUT-BORDER: rgb(26, 26, 26);
   --FORM-BG: rgb(41, 42, 43);
   --FORM-FONT: rgb(175, 175, 175);
+  --COMPLETE: rgb(90, 183, 99);
+  --INCOMPLETE: rgb(211, 65, 61);
 }
 
 body {
@@ -683,6 +685,11 @@ hr {
   align-self: center;
 }
 
+.form_container a {
+  text-decoration: none;
+  color: var(--ACCENT-COLOR);
+}
+
 .player_form {
   display: flex;
   flex-flow: column;
@@ -692,7 +699,6 @@ hr {
   padding: 2rem;
   background-color: rgb(31, 30, 29);
   width: 60%;
-  /* box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2); */
 }
 
 .form_header {
@@ -714,7 +720,7 @@ hr {
   color: var(--FONT-COLOR);
   background-color: rgb(47, 47, 47);
   border: none;
-  border-bottom: 4px solid rgb(255, 144, 132);
+  border-bottom: 2px solid var(--INCOMPLETE);
 }
 
 .form_content_container {
@@ -735,7 +741,6 @@ hr {
   flex-wrap: wrap;
 }
 
-/* Temp */
 .active,
 .form_content_title:hover {
   background-color: rgb(37, 36, 35);
@@ -797,8 +802,8 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
-  height: 1.563rem;
-  width: 1.563rem;
+  height: 1.3rem;
+  width: 1.3rem;
   background-color: #eee;
 }
 
@@ -826,10 +831,10 @@ hr {
 
 /* Style the checkmark/indicator */
 .checkbox_container .checkmark:after {
-  left: 0.563rem;
-  top: 0.313rem;
-  width: 0.313rem;
-  height: 0.625rem;
+  left: 0.4rem;
+  top: 0.1rem;
+  width: 0.3rem;
+  height: 0.6rem;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
@@ -840,8 +845,6 @@ hr {
 .submit_btn {
   align-self: flex-end;
   padding: 0.6rem 1rem;
-  margin: 0.5rem;
-  margin-top: 2rem;
   border: none;
   background-color: var(--ACCENT-COLOR);
   border-radius: 25px;
@@ -862,8 +865,6 @@ hr {
 .submit_btn_disabled {
   align-self: flex-end;
   padding: 0.6rem 1rem;
-  margin: 0.5rem;
-  margin-top: 2rem;
   border: none;
   background-color: #3d3d3d;
   border-radius: 25px;
@@ -874,7 +875,7 @@ hr {
 }
 
 .complete {
-  border-bottom: 4px solid rgb(74, 218, 146);
+  border-bottom: 4px solid var(--COMPLETE);
   background-color: #252423;
 }
 
@@ -897,7 +898,7 @@ hr {
 }
 
 .form_content .input_error {
-  border-bottom: 2px solid rgb(255, 144, 132);
+  border-bottom: 1px solid var(--INCOMPLETE);
   transition: 0.1s;
   animation: animate_error_border linear;
 }
