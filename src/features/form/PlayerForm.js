@@ -234,7 +234,7 @@ const PlayerForm = () => {
                     captainInGameName === null ? 'input_error' : ''
                   }`}
                   type="text"
-                  placeholder="IGN"
+                  placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setCaptainInGameName(e.target.value)}
                 />
@@ -315,7 +315,7 @@ const PlayerForm = () => {
                 <input
                   className={`${p2InGameName === null ? 'input_error' : ''}`}
                   type="text"
-                  placeholder="IGN"
+                  placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setP2InGameName(e.target.value)}
                 />
@@ -376,7 +376,7 @@ const PlayerForm = () => {
                 <input
                   className={`${p3InGameName === null ? 'input_error' : ''}`}
                   type="text"
-                  placeholder="IGN"
+                  placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setP3InGameName(e.target.value)}
                 />
@@ -437,7 +437,7 @@ const PlayerForm = () => {
                 <input
                   className={`${p4InGameName === null ? 'input_error' : ''}`}
                   type="text"
-                  placeholder="IGN"
+                  placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setP4InGameName(e.target.value)}
                 />
@@ -498,7 +498,7 @@ const PlayerForm = () => {
                 <input
                   className={`${p5InGameName === null ? 'input_error' : ''}`}
                   type="text"
-                  placeholder="IGN"
+                  placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setP5InGameName(e.target.value)}
                 />
