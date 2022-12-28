@@ -31,7 +31,7 @@ const Tournaments = () => {
           <p className="table_title">PRIZE DISTRIBUTION</p>
           <table>
             <thead>
-              <tr>
+              <tr className="prize_dist_header">
                 <th colSpan="1">Place</th>
                 <th colSpan="1">Prize</th>
                 <th colSpan="1">Team</th>
@@ -53,6 +53,31 @@ const Tournaments = () => {
                 <td>TBD</td>
                 <td style={{ width: '600px' }}>TBD</td>
               </tr>
+              <tr>
+                <td>3rd - 4th</td>
+                <td>TBD</td>
+                <td style={{ width: '600px' }}>TBD</td>
+              </tr>
+              {/* <tr className='collapsed_row'>
+                <td>5th - 8th</td>
+                <td>TBD</td>
+                <td style={{ width: '600px' }}>TBD</td>
+              </tr>
+              <tr>
+                <td>5th - 8th</td>
+                <td>TBD</td>
+                <td style={{ width: '600px' }}>TBD</td>
+              </tr>
+              <tr>
+                <td>5th - 8th</td>
+                <td>TBD</td>
+                <td style={{ width: '600px' }}>TBD</td>
+              </tr>
+              <tr>
+                <td>5th - 8th</td>
+                <td>TBD</td>
+                <td style={{ width: '600px' }}>TBD</td>
+              </tr> */}
             </tbody>
           </table>
         </div>

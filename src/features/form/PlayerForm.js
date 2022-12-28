@@ -559,7 +559,9 @@ const PlayerForm = () => {
             ></input>
             <label>
               I herby state that I along with the rest of my team, identify as a
-              person of marginalized gender.
+              person of marginalized gender. (We, the organization, may request
+              further identification if needed by contacting the captain of the
+              team)
             </label>
           </div>
           <div className="checkbox_container_content">
@@ -609,7 +611,7 @@ const PlayerForm = () => {
         </button>
         <p className="loading_msg">
           {state.status === 'LOADING'
-            ? 'We apologize for the inconvenience, we are experiencing a high volume of registrations. Submitting a form may take longer than expected.'
+            ? 'We apologize for the inconvenience, we are experiencing a high volume of registrations. Submitting a form may take longer than expected (~2mins).'
             : ''}
         </p>
       </form>
