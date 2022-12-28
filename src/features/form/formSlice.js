@@ -139,24 +139,49 @@ export const playersSlice = createSlice({
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(createTeam.fulfilled, (state, action) => {
-      state.info.push(action.payload);
-    });
-    builder.addCase(addCaptain.fulfilled, (state, action) => {
-      state.info.push(action.payload);
-    });
-    builder.addCase(addPlayer2.fulfilled, (state, action) => {
-      state.info.push(action.payload);
-    });
-    builder.addCase(addPlayer3.fulfilled, (state, action) => {
-      state.info.push(action.payload);
-    });
-    builder.addCase(addPlayer4.fulfilled, (state, action) => {
-      state.info.push(action.payload);
-    });
-    builder.addCase(addPlayer5.fulfilled, (state, action) => {
-      state.info.push(action.payload);
-    });
+    builder
+      .addCase(createTeam.fulfilled, (state, action) => {
+        state.info.push(action.payload);
+      })
+      .addCase(createTeam.pending, (state, action) => {
+        state.status = 'LOADING';
+      });
+    builder
+      .addCase(addCaptain.fulfilled, (state, action) => {
+        state.info.push(action.payload);
+      })
+      .addCase(addCaptain.pending, (state, action) => {
+        state.status = 'LOADING';
+      });
+    builder
+      .addCase(addPlayer2.fulfilled, (state, action) => {
+        state.info.push(action.payload);
+      })
+      .addCase(addPlayer2.pending, (state, action) => {
+        state.status = 'LOADING';
+      });
+    builder
+      .addCase(addPlayer3.fulfilled, (state, action) => {
+        state.info.push(action.payload);
+      })
+      .addCase(addPlayer3.pending, (state, action) => {
+        state.status = 'LOADING';
+      });
+    builder
+      .addCase(addPlayer4.fulfilled, (state, action) => {
+        state.info.push(action.payload);
+      })
+      .addCase(addPlayer4.pending, (state, action) => {
+        state.status = 'LOADING';
+      });
+    builder
+      .addCase(addPlayer5.fulfilled, (state, action) => {
+        state.status = 'FULFILLED';
+        state.info.push(action.payload);
+      })
+      .addCase(addPlayer5.pending, (state, action) => {
+        state.status = 'LOADING';
+      });
   },
 });
 

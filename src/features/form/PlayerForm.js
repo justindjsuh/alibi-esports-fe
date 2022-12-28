@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../modal/Modal';
 import {
   createTeam,
@@ -8,6 +8,7 @@ import {
   addPlayer3,
   addPlayer4,
   addPlayer5,
+  selectPlayers,
 } from './formSlice';
 
 const PlayerForm = () => {
@@ -49,6 +50,8 @@ const PlayerForm = () => {
 
   // for giving a confirmation of submission screen
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const state = useSelector(selectPlayers);
 
   const ref = useRef([]);
   const dispatch = useDispatch();
@@ -141,7 +144,6 @@ const PlayerForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormCompletion(false);
     await dispatch(createTeam({ teamName }));
     await dispatch(
       addCaptain({
@@ -599,7 +601,7 @@ const PlayerForm = () => {
           className={`${formCompletion ? 'submit_btn' : 'submit_btn_disabled'}`}
           disabled={formCompletion ? false : true}
         >
-          {isSubmitted ? 'LOADING' : 'SUBMIT'}
+          {state.status === 'LOADING' ? 'LOADING' : 'SUBMIT'}
         </button>
       </form>
       {isSubmitted ? <Modal setIsSubmitted={setIsSubmitted} /> : null}
