@@ -573,9 +573,9 @@ const PlayerForm = () => {
             ></input>
             <label>
               I agree to have one person Venmo the entrance fee for the whole
-              team ($25) to x person by JANUARY 3rd - (Please include "Entrance
-              fee for the 2023 Alibi Invitational for *TEAMNAME*" in the
-              description of the payment)
+              team ($25) to @Choi-Gloria by JANUARY 3rd - (Please include
+              "Entrance fee for the 2023 Alibi Invitational for *TEAMNAME*" in
+              the description of the payment)
             </label>
           </div>
 
