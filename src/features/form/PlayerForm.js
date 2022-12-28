@@ -533,10 +533,10 @@ const PlayerForm = () => {
             ></input>
             <label>
               I hereby represent that I am eighteen (18) years of age or older
-              and I am competent to contract in my own name or if you live in
-              another state or country, you are of the age necessary to enter
-              into contracts according to the laws of your home state or
-              country.
+              and I am competent to contract in my own name for the state of
+              Pennsylvania. If I live in another state or country, I am of the
+              age necessary to enter into contracts according to the laws of my
+              home state or country.
             </label>
           </div>
           <div className="checkbox_container_content">
@@ -547,9 +547,11 @@ const PlayerForm = () => {
               required
             ></input>
             <label>
-              I have read the waiver form above in its entirety, and I
-              voluntarily accept the terms of the waiver by marking this
-              checkbox, and warrant that I fully understand its contents.
+              I herby state that I am the Captain of the team members whose
+              names are listed in the registration form above. On behalf of the
+              team who has given me permission, I am accepting the terms of the
+              wavier on their behalf by marking this checkbox and warranting
+              that they and I fully understand its contents.
             </label>
           </div>
         </div>

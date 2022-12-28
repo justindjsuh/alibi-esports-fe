@@ -26,13 +26,13 @@ const Modal = ({ setIsSubmitted }) => {
     <div className="container" ref={modalRef} onClick={closeModal}>
       <div className="modal">
         <div className="modal_header">
-          <p>Thanks for signing up!</p>
+          <p>Your team has been registered.</p>
         </div>
         <div className="modal_content">
           <p>
             We wish you and your team the best of luck in the competition!
             <br></br> Here are some helpful links to stay up to date and
-            informed!
+            informed.
           </p>
           <div className="modal_socials">
             <a

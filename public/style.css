@@ -580,7 +580,7 @@ hr {
 
 .public_section_3 {
   background-color: #2f2f2f;
-  min-height: 105vh;
+  min-height: 90vh;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -618,7 +618,7 @@ hr {
 }
 
 .timeline_section {
-  width: 70%;
+  width: 90%;
   display: flex;
   margin: 1rem;
   justify-content: center;

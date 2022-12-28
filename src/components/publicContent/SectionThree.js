@@ -40,7 +40,7 @@ const SectionThree = () => {
           <p className="timeline_desc">
             We find opportunities in communities either by reaching out to
             potential target audiences like schools or clubs and send them some
-            kind of inquiry to gauge how interested they are!
+            kind of inquiry to gauge how interested they are.
           </p>
         </div>
         <div
@@ -56,7 +56,7 @@ const SectionThree = () => {
           <p className="timeline_desc">
             We talk to members of the community and we try to get a better idea
             of what they are looking for in a competitive environment. This
-            helps us gauge what kind of tournament to organize for them!
+            helps us gauge what kind of tournament to organize for them.
           </p>
         </div>
         <div
@@ -73,7 +73,7 @@ const SectionThree = () => {
             We sit down with the team and start planning tournament details,
             potential outlets to advertise, and how to gain interest. This can
             be done through social media or other organizations if they are
-            willing to help!
+            willing to assist.
           </p>
         </div>
         <div
