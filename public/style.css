@@ -908,9 +908,9 @@ hr {
 }
 
 .loading_msg {
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   color: gray;
-  display: inline;
+  /* display: inline; */
 }
 
 .complete {

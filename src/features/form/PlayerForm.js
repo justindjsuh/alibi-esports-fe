@@ -610,9 +610,15 @@ const PlayerForm = () => {
           {state.status === 'LOADING' ? 'LOADING' : 'SUBMIT'}
         </button>
         <p className="loading_msg">
-          {state.status === 'LOADING'
-            ? 'We apologize for the inconvenience, we are experiencing a high volume of registrations, which may delay submissions (< 2mins). DO NOT REFRESH OR EXIT THIS PAGE'
-            : ''}
+          {state.status === 'LOADING' ? (
+            <p>
+              We apologize for the inconvenience, we are experiencing a high
+              volume of registrations, which may delay submissions (~1-2mins).{' '}
+              <br></br>PLEASE DO NOT REFRESH OR EXIT THIS PAGE
+            </p>
+          ) : (
+            ''
+          )}
         </p>
       </form>
       {isSubmitted ? <Modal setIsSubmitted={setIsSubmitted} /> : null}
