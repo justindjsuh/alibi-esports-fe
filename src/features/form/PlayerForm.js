@@ -569,7 +569,7 @@ const PlayerForm = () => {
           className={`${formCompletion ? 'submit_btn' : 'submit_btn_disabled'}`}
           disabled={formCompletion ? false : true}
         >
-          SUBMIT
+          {isSubmitted ? 'LOADING' : 'SUBMIT'}
         </button>
       </form>
       {isSubmitted ? <Modal setIsSubmitted={setIsSubmitted} /> : null}
