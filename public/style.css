@@ -89,7 +89,19 @@ body {
   margin: 0rem;
   justify-content: center;
   background-color: var(--BGCOLOR);
-  padding-top: 1rem;
+  padding: 1rem 0;
+  box-shadow: 0 4px 22px -2px rgba(0, 0, 0, 0);
+  animation: header_shadow 3s forwards;
+  animation-delay: 4s;
+}
+
+@keyframes header_shadow {
+  from {
+    box-shadow: 0 4px 22px -2px rgba(0, 0, 0, 0);
+  }
+  to {
+    box-shadow: 0 4px 22px -2px rgba(0, 0, 0, 0.3);
+  }
 }
 
 #header_accent_btn p {
@@ -964,4 +976,100 @@ hr {
   to {
     transform: scale(1);
   }
+}
+
+/* TOURNAMENT PAGE */
+.tournament_info_container {
+  display: flex;
+  justify-content: center;
+}
+
+.tournament_info {
+  background-color: var(--INPUT-BG);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 65%;
+  height: 100vh;
+}
+
+.tournament_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3d3d3d;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.tournament_header img {
+  width: 7%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.tournament_name {
+  font-size: 26px;
+  margin: 0;
+}
+
+.tournament_details {
+  display: flex;
+  flex-flow: column;
+}
+
+.tournament_specifics {
+  display: flex;
+}
+
+.tournament_specifics p {
+  margin: 0 1.5rem 1.5rem 0;
+  font-size: 14px;
+}
+
+.tournament_specifics span {
+  font-size: 10px;
+  color: rgb(182, 182, 182);
+}
+
+.table_title {
+  margin: 2rem 0 0.5rem 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.tournament_info td,
+th {
+  border: 1px solid #2a2928;
+}
+
+.tournament_info th,
+td {
+  padding: 0.5rem 2rem;
+  font-size: 14px;
+}
+
+.tournament_info th {
+  background-color: var(--INPUT-BG);
+  font-weight: 400;
+}
+
+.tournament_info td {
+  background-color: #848484;
+}
+
+.tournament_info table {
+  width: 100%;
+  display: block;
+  border-spacing: 0;
+  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.temp {
+  margin: 2rem 0 0.5rem 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }

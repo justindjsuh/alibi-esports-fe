@@ -19,7 +19,7 @@ const Header = () => {
           <Link to="/">
             <p className="header_underline_animation">Homepage</p>
           </Link>
-          <Link to="/teams">
+          <Link to="/tournaments">
             <p className="header_underline_animation">Tournaments</p>
           </Link>
           <Link to="/signup" id="header_accent_btn">
