@@ -1,4 +1,9 @@
+import { useEffect } from 'react';
+
 const Tournaments = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="tournament_info_container">
       <div className="tournament_info">
