@@ -141,6 +141,7 @@ const PlayerForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormCompletion(false);
     await dispatch(createTeam({ teamName }));
     await dispatch(
       addCaptain({
@@ -555,11 +556,40 @@ const PlayerForm = () => {
               required
             ></input>
             <label>
+              I herby state that I along with the rest of my team, identify as a
+              person of marginalized gender.
+            </label>
+          </div>
+          <div className="checkbox_container_content">
+            <input
+              type="checkbox"
+              onChange={handleCheck}
+              name="waiver"
+              required
+            ></input>
+            <label>
+              I agree to have one person Venmo the entrance fee for the whole
+              team ($25) to x person by JANUARY 3rd - (Please include "Entrance
+              fee for the 2023 Alibi Invitational for *TEAMNAME*" in the
+              description of the payment)
+            </label>
+          </div>
+
+          <div className="checkbox_container_content">
+            <input
+              type="checkbox"
+              onChange={handleCheck}
+              name="waiver"
+              required
+            ></input>
+            <label>
               I herby state that I am the Captain of the team members whose
               names are listed in the registration form above. On behalf of the
-              team who has given me permission, I am accepting the terms of the
-              wavier on their behalf by marking this checkbox and warranting
-              that they and I fully understand its contents.
+              team who has given me permission, I, the captain, am accepting the
+              terms of the wavier <strong>as well as</strong> all of the
+              previous statements on their and my behalf by marking this
+              checkbox and warranting that they and I fully understand its
+              contents.
             </label>
           </div>
         </div>

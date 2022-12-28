@@ -13,6 +13,11 @@ const Form = () => {
           January 5th at 5 p.m - 10 p.m. and January 6th at 5 p.m. - 12 a.m. If
           you do not respect this commitment, the organization may blacklist you
           for future opportunities.<br></br> <br></br>
+          <strong>
+            THIS TOURNAMENT IS EXCLUSIVE TO THOSE WHO IDENTIFY AS A PERSON OF
+            MARGINALIZED GENDERS
+          </strong>
+          <br></br> <br></br>
           Registrations will be available until January 3rd at 8 p.m. <br></br>
           The Invitational will be streamed on our twitch channel:
           <a
