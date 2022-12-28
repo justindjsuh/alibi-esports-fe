@@ -607,6 +607,11 @@ const PlayerForm = () => {
         >
           {state.status === 'LOADING' ? 'LOADING' : 'SUBMIT'}
         </button>
+        <p className="loading_msg">
+          {state.status === 'LOADING'
+            ? 'We apologize for the inconvenience, we are experiencing a high volume of registrations. Submitting a form may take longer than expected.'
+            : ''}
+        </p>
       </form>
       {isSubmitted ? <Modal setIsSubmitted={setIsSubmitted} /> : null}
     </>

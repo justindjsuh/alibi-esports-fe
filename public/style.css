@@ -907,6 +907,12 @@ hr {
   font-size: 18px;
 }
 
+.loading_msg {
+  margin-left: 1rem;
+  color: gray;
+  display: inline;
+}
+
 .complete {
   border-bottom: 4px solid var(--COMPLETE);
   background-color: #252423;
