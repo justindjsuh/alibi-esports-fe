@@ -962,6 +962,7 @@ hr {
 
 .modal_header {
   width: 100%;
+  height: 100%;
 }
 
 .modal .modal_header p {
@@ -1009,11 +1010,11 @@ hr {
 
 .container .modal {
   z-index: 1;
-  width: 35%;
-  height: 37%;
+  width: 33%;
+  min-height: 30%;
   background: var(--INPUT-BG);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-flow: column;
   align-items: center;
   text-align: center;
@@ -1026,7 +1027,7 @@ hr {
 .modal button {
   font-size: 20px;
   padding: 0.5rem 1rem;
-  margin: 1rem;
+  /* margin-bottom: 1rem; */
   background-color: var(--INPUT-BG);
   color: var(--ACCENT-COLOR);
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
@@ -1039,7 +1040,10 @@ hr {
 }
 
 .modal_button {
-  margin-top: 1rem;
+  margin: 1rem 0;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
 }
 
 @keyframes animate {
