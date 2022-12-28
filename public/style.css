@@ -84,6 +84,7 @@ body {
 }
 
 .header_container {
+  width: 100%;
   display: flex;
   align-items: center;
   margin: 0rem;
@@ -398,6 +399,7 @@ body {
   background-color: #2f2f2f;
   min-height: 40vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -557,7 +559,7 @@ hr {
   align-items: center;
   justify-content: center;
   margin: 0;
-  width: 20%;
+  min-width: 15%;
   font-size: 28px;
   font-weight: 600;
   background-color: #181818;

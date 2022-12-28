@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import SectionOne from './publicContent/SectionOne';
 import SectionTwo from './publicContent/SectionTwo';
 import SectionThree from './publicContent/SectionThree';
+import { Link } from 'react-router-dom';
 
 const Public = () => {
   const [letters, setLetters] = useState('ALIBI ESPORTS');
@@ -28,9 +29,9 @@ const Public = () => {
         >
           <div id="company_name">ALIBIESPORTS</div>
           <div className="public_main_btns">
-            <a href="#team">MEET THE TEAM</a>
+            <a href="#section1_top">WHO WE ARE</a>
             {/* change this to contact href */}
-            <a href="#team">CONTACT US</a>
+            <Link to="/tournaments">Tournaments</Link>
           </div>
           <div className="public_quote_container">
             <div className="founder_quote">

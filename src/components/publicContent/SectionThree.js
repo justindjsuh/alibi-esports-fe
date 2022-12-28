@@ -38,9 +38,9 @@ const SectionThree = () => {
         >
           <p className="timeline_title">STEP 1</p>
           <p className="timeline_desc">
-            Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super
-            chub very good spot, the neighborhood pupper lotsa pats. Borkdrive
-            shibe shoober what a nice floof, borking doggo.
+            We find opportunities in communities either by reaching out to
+            potential target audiences like schools or clubs and send them some
+            kind of inquiry to gauge how interested they are!
           </p>
         </div>
         <div
@@ -54,9 +54,9 @@ const SectionThree = () => {
         >
           <p className="timeline_title">STEP 2</p>
           <p className="timeline_desc">
-            Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super
-            chub very good spot, the neighborhood pupper lotsa pats. Borkdrive
-            shibe shoober what a nice floof, borking doggo.
+            We talk to members of the community and we try to get a better idea
+            of what they are looking for in a competitive environment. This
+            helps us gauge what kind of tournament to organize for them!
           </p>
         </div>
         <div
@@ -70,9 +70,10 @@ const SectionThree = () => {
         >
           <p className="timeline_title">STEP 3</p>
           <p className="timeline_desc">
-            Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super
-            chub very good spot, the neighborhood pupper lotsa pats. Borkdrive
-            shibe shoober what a nice floof, borking doggo.
+            We sit down with the team and start planning tournament details,
+            potential outlets to advertise, and how to gain interest. This can
+            be done through social media or other organizations if they are
+            willing to help!
           </p>
         </div>
         <div
@@ -86,9 +87,9 @@ const SectionThree = () => {
         >
           <p className="timeline_title">STEP 4</p>
           <p className="timeline_desc">
-            Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super
-            chub very good spot, the neighborhood pupper lotsa pats. Borkdrive
-            shibe shoober what a nice floof, borking doggo.
+            Finally, with production, design, and interest out of the way, we
+            can open up the tournament and have players from the community
+            compete with one another!
           </p>
         </div>
       </div>

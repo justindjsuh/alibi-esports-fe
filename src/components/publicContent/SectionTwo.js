@@ -1,7 +1,7 @@
 const SectionTwo = () => {
   return (
     <div className="public_section_2">
-      <div className="section_meet_the_team" id="team">
+      <div className="section_meet_the_team">
         <p>MEET THE TEAM</p>
       </div>
       <div className="section2_info">
