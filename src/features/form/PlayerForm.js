@@ -139,10 +139,10 @@ const PlayerForm = () => {
     } else setFormCompletion(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(createTeam({ teamName }));
-    dispatch(
+    await dispatch(createTeam({ teamName }));
+    await dispatch(
       addCaptain({
         captainFName,
         captainLName,
@@ -152,10 +152,18 @@ const PlayerForm = () => {
         teamName,
       })
     );
-    dispatch(addPlayer2({ p2FName, p2LName, p2InGameName, p2Rank, teamName }));
-    dispatch(addPlayer3({ p3FName, p3LName, p3InGameName, p3Rank, teamName }));
-    dispatch(addPlayer4({ p4FName, p4LName, p4InGameName, p4Rank, teamName }));
-    dispatch(addPlayer5({ p5FName, p5LName, p5InGameName, p5Rank, teamName }));
+    await dispatch(
+      addPlayer2({ p2FName, p2LName, p2InGameName, p2Rank, teamName })
+    );
+    await dispatch(
+      addPlayer3({ p3FName, p3LName, p3InGameName, p3Rank, teamName })
+    );
+    await dispatch(
+      addPlayer4({ p4FName, p4LName, p4InGameName, p4Rank, teamName })
+    );
+    await dispatch(
+      addPlayer5({ p5FName, p5LName, p5InGameName, p5Rank, teamName })
+    );
     setIsSubmitted(true);
   };
 

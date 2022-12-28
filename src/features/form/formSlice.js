@@ -11,6 +11,7 @@ export const createTeam = createAsyncThunk(
           teamName,
         }
       );
+      console.log('CREATED TEAM', data);
       return data;
     } catch (error) {
       console.error(error);
@@ -40,6 +41,7 @@ export const addCaptain = createAsyncThunk(
           teamName,
         }
       );
+      console.log('CREATED CAPTAIN', data);
       return data;
     } catch (error) {
       console.error(error);
@@ -61,7 +63,7 @@ export const addPlayer2 = createAsyncThunk(
           teamName,
         }
       );
-      console.log(data);
+      console.log('CREATED PLAYER 2', data);
       return data;
     } catch (error) {
       console.error(error);
@@ -83,6 +85,7 @@ export const addPlayer3 = createAsyncThunk(
           teamName,
         }
       );
+      console.log('CREATED PLAYER 3', data);
       return data;
     } catch (error) {
       console.error(error);
@@ -104,6 +107,7 @@ export const addPlayer4 = createAsyncThunk(
           teamName,
         }
       );
+      console.log('CREATED PLAYER 4', data);
       return data;
     } catch (error) {
       console.error(error);
@@ -125,6 +129,7 @@ export const addPlayer5 = createAsyncThunk(
           teamName,
         }
       );
+      console.log('CREATED PLAYER 5', data);
       return data;
     } catch (error) {
       console.error(error);
