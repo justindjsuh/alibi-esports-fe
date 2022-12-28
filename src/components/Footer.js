@@ -7,13 +7,15 @@ const Footer = () => {
         <div className="upper_footer">
           <div className="footer_content">
             <div className="footer_col">
+              <p className="footer_col_title">Links</p>
               <p>
                 <a href="#section1_top">About</a>
               </p>
               <p>
                 <Link to="/tournaments">Tournaments</Link>
               </p>
-              <p>Contact Us</p>
+              <p className="footer_col_title">Contact Us</p>
+              <p>help.alibiesports@gmail.com</p>
             </div>
             <div className="footer_col footer_last_col">
               <p className="footer_discord">

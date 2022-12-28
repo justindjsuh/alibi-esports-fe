@@ -171,6 +171,11 @@ body {
   border-radius: 90%;
 }
 
+.footer_col_title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .footer_col {
   margin: 2rem;
   flex: 1;
