@@ -598,7 +598,11 @@ const PlayerForm = () => {
         {/* BUTTONS */}
         <button
           type="submit"
-          className={`${formCompletion ? 'submit_btn' : 'submit_btn_disabled'}`}
+          className={`${
+            formCompletion || state.status === 'LOADING'
+              ? 'submit_btn'
+              : 'submit_btn_disabled'
+          }`}
           disabled={formCompletion ? false : true}
         >
           {state.status === 'LOADING' ? 'LOADING' : 'SUBMIT'}
