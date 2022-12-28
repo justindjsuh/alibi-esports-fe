@@ -61,7 +61,9 @@ const Form = () => {
         </div>
         <p>
           Please be sure to SAVE after you complete a player's form AND whenever
-          you make a change to a field!
+          you make a change to a field!<br></br>If you have any issues with this
+          form and cannot submit, please reach out to us at
+          help.alibiesports@gmail.com
         </p>
         <PlayerForm />
       </div>
