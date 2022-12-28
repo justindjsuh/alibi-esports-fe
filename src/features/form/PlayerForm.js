@@ -611,7 +611,7 @@ const PlayerForm = () => {
         </button>
         <p className="loading_msg">
           {state.status === 'LOADING'
-            ? 'We apologize for the inconvenience, we are experiencing a high volume of registrations. Submitting a form may take longer than expected (< 2mins). DO NOT REFRESH OR EXIT THIS PAGE'
+            ? 'We apologize for the inconvenience, we are experiencing a high volume of registrations, which may delay submissions (< 2mins). DO NOT REFRESH OR EXIT THIS PAGE'
             : ''}
         </p>
       </form>
