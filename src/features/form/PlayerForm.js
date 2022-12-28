@@ -599,7 +599,7 @@ const PlayerForm = () => {
         <button
           type="submit"
           className={`${
-            formCompletion || state.status === 'LOADING'
+            formCompletion && state.status !== 'LOADING'
               ? 'submit_btn'
               : 'submit_btn_disabled'
           }`}
