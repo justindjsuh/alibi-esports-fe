@@ -13,7 +13,7 @@ export const createTeam = createAsyncThunk(
   }) => {
     try {
       const { data } = await axios.post(
-        'https://alibi-esports-api.onrender.com/api/teams/createTeam',
+        'https://scarlet-bandicoot-cape.cyclic.app/api/teams/createTeam',
         {
           teamName,
           sub1IGN,
@@ -42,7 +42,7 @@ export const addCaptain = createAsyncThunk(
   }) => {
     try {
       const { data } = await axios.post(
-        'https://alibi-esports-api.onrender.com/api/players/addCaptain',
+        'https://scarlet-bandicoot-cape.cyclic.app/api/players/addCaptain',
         {
           captainFName,
           captainLName,
@@ -64,7 +64,7 @@ export const addPlayer2 = createAsyncThunk(
   async ({ p2FName, p2LName, p2InGameName, p2Rank, teamName }) => {
     try {
       const { data } = await axios.post(
-        'https://alibi-esports-api.onrender.com/api/players/addPlayer2',
+        'https://scarlet-bandicoot-cape.cyclic.app/api/players/addPlayer2',
         {
           p2FName,
           p2LName,
@@ -85,7 +85,7 @@ export const addPlayer3 = createAsyncThunk(
   async ({ p3FName, p3LName, p3InGameName, p3Rank, teamName }) => {
     try {
       const { data } = await axios.post(
-        'https://alibi-esports-api.onrender.com/api/players/addPlayer3',
+        'https://scarlet-bandicoot-cape.cyclic.app/api/players/addPlayer3',
         {
           p3FName,
           p3LName,
@@ -106,7 +106,7 @@ export const addPlayer4 = createAsyncThunk(
   async ({ p4FName, p4LName, p4InGameName, p4Rank, teamName }) => {
     try {
       const { data } = await axios.post(
-        'https://alibi-esports-api.onrender.com/api/players/addPlayer4',
+        'https://scarlet-bandicoot-cape.cyclic.app/api/players/addPlayer4',
         {
           p4FName,
           p4LName,
@@ -127,7 +127,7 @@ export const addPlayer5 = createAsyncThunk(
   async ({ p5FName, p5LName, p5InGameName, p5Rank, teamName }) => {
     try {
       const { data } = await axios.post(
-        'https://alibi-esports-api.onrender.com/api/players/addPlayer5',
+        'https://scarlet-bandicoot-cape.cyclic.app/api/players/addPlayer5',
         {
           p5FName,
           p5LName,

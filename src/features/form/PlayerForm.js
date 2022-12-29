@@ -649,7 +649,7 @@ const PlayerForm = () => {
                 <label htmlFor="coachIGN">Coach IGN</label>
                 <input
                   type="text"
-                  placeholder="Coach IGN"
+                  placeholder="Coach IGN#0000"
                   name="coachIGN"
                   onChange={(e) => setCoachIGN(e.target.value)}
                 />
