@@ -3,12 +3,24 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const createTeam = createAsyncThunk(
   'signup/createTeam',
-  async ({ teamName }) => {
+  async ({
+    teamName,
+    sub1IGN,
+    sub2IGN,
+    coachIGN,
+    coachDiscord,
+    managerDiscord,
+  }) => {
     try {
       const { data } = await axios.post(
         'https://alibi-esports-api.onrender.com/api/teams/createTeam',
         {
           teamName,
+          sub1IGN,
+          sub2IGN,
+          coachIGN,
+          coachDiscord,
+          managerDiscord,
         }
       );
       return data;
@@ -145,6 +157,9 @@ export const playersSlice = createSlice({
       })
       .addCase(createTeam.pending, (state, action) => {
         state.status = 'LOADING';
+      })
+      .addCase(createTeam.rejected, (state, action) => {
+        state.status = 'REJECTED';
       });
     builder
       .addCase(addCaptain.fulfilled, (state, action) => {
@@ -152,6 +167,9 @@ export const playersSlice = createSlice({
       })
       .addCase(addCaptain.pending, (state, action) => {
         state.status = 'LOADING';
+      })
+      .addCase(addCaptain.rejected, (state, action) => {
+        state.status = 'REJECTED';
       });
     builder
       .addCase(addPlayer2.fulfilled, (state, action) => {
@@ -159,6 +177,9 @@ export const playersSlice = createSlice({
       })
       .addCase(addPlayer2.pending, (state, action) => {
         state.status = 'LOADING';
+      })
+      .addCase(addPlayer2.rejected, (state, action) => {
+        state.status = 'REJECTED';
       });
     builder
       .addCase(addPlayer3.fulfilled, (state, action) => {
@@ -166,6 +187,9 @@ export const playersSlice = createSlice({
       })
       .addCase(addPlayer3.pending, (state, action) => {
         state.status = 'LOADING';
+      })
+      .addCase(addPlayer3.rejected, (state, action) => {
+        state.status = 'REJECTED';
       });
     builder
       .addCase(addPlayer4.fulfilled, (state, action) => {
@@ -173,6 +197,9 @@ export const playersSlice = createSlice({
       })
       .addCase(addPlayer4.pending, (state, action) => {
         state.status = 'LOADING';
+      })
+      .addCase(addPlayer4.rejected, (state, action) => {
+        state.status = 'REJECTED';
       });
     builder
       .addCase(addPlayer5.fulfilled, (state, action) => {
@@ -181,6 +208,9 @@ export const playersSlice = createSlice({
       })
       .addCase(addPlayer5.pending, (state, action) => {
         state.status = 'LOADING';
+      })
+      .addCase(addPlayer5.rejected, (state, action) => {
+        state.status = 'REJECTED';
       });
   },
 });

@@ -807,6 +807,10 @@ hr {
   border-bottom: 2px solid var(--INCOMPLETE);
 }
 
+.form_content_optionals .form_content_title {
+  border-bottom: 2px solid rgb(194, 194, 23);
+}
+
 .form_content_container {
   margin: 1rem 0;
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);

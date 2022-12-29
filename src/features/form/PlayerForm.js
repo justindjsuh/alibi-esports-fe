@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../modal/Modal';
+import ModalError from '../modal/ModalError';
 import {
   createTeam,
   addCaptain,
@@ -39,6 +40,14 @@ const PlayerForm = () => {
   const [p5InGameName, setP5InGameName] = useState('');
   const [p5Rank, setP5Rank] = useState('');
 
+  const [sub1IGN, setSub1IGN] = useState(null);
+  const [sub2IGN, setSub2IGN] = useState(null);
+
+  const [coachIGN, setCoachIGN] = useState(null);
+  const [coachDiscord, setCoachDiscord] = useState(null);
+
+  const [managerDiscord, setManagerDiscord] = useState(null);
+
   //   for adding the completed class to change border color
   const [capCompletion, setCapCompletion] = useState(false);
   const [p2Completion, setP2Completion] = useState(false);
@@ -76,6 +85,15 @@ const PlayerForm = () => {
       if (!captainDiscord) setCaptainDiscord(null);
       if (!teamName) setTeamName(null);
     }
+    const collapsibleContainer = e.target.parentElement;
+    if (collapsibleContainer.style.maxHeight) {
+      collapsibleContainer.style.maxHeight = null;
+    }
+    const nextCollapsible = document.getElementsByClassName(
+      'form_content_player2'
+    )[0];
+    nextCollapsible.childNodes[1].style.maxHeight =
+      nextCollapsible.childNodes[1].scrollHeight + 'px';
   };
 
   const handlePlayer2SectionSave = (e) => {
@@ -89,6 +107,15 @@ const PlayerForm = () => {
       if (!p2InGameName) setP2InGameName(null);
       if (!p2Rank) setP2Rank(null);
     }
+    const collapsibleContainer = e.target.parentElement;
+    if (collapsibleContainer.style.maxHeight) {
+      collapsibleContainer.style.maxHeight = null;
+    }
+    const nextCollapsible = document.getElementsByClassName(
+      'form_content_player3'
+    )[0];
+    nextCollapsible.childNodes[1].style.maxHeight =
+      nextCollapsible.childNodes[1].scrollHeight + 'px';
   };
 
   const handlePlayer3SectionSave = (e) => {
@@ -102,6 +129,15 @@ const PlayerForm = () => {
       if (!p3InGameName) setP3InGameName(null);
       if (!p3Rank) setP3Rank(null);
     }
+    const collapsibleContainer = e.target.parentElement;
+    if (collapsibleContainer.style.maxHeight) {
+      collapsibleContainer.style.maxHeight = null;
+    }
+    const nextCollapsible = document.getElementsByClassName(
+      'form_content_player4'
+    )[0];
+    nextCollapsible.childNodes[1].style.maxHeight =
+      nextCollapsible.childNodes[1].scrollHeight + 'px';
   };
 
   const handlePlayer4SectionSave = (e) => {
@@ -115,6 +151,15 @@ const PlayerForm = () => {
       if (!p4InGameName) setP4InGameName(null);
       if (!p4Rank) setP4Rank(null);
     }
+    const collapsibleContainer = e.target.parentElement;
+    if (collapsibleContainer.style.maxHeight) {
+      collapsibleContainer.style.maxHeight = null;
+    }
+    const nextCollapsible = document.getElementsByClassName(
+      'form_content_player5'
+    )[0];
+    nextCollapsible.childNodes[1].style.maxHeight =
+      nextCollapsible.childNodes[1].scrollHeight + 'px';
   };
 
   const handlePlayer5SectionSave = (e) => {
@@ -127,6 +172,23 @@ const PlayerForm = () => {
       if (!p5LName) setP5LName(null);
       if (!p5InGameName) setP5InGameName(null);
       if (!p5Rank) setP5Rank(null);
+    }
+    const collapsibleContainer = e.target.parentElement;
+    if (collapsibleContainer.style.maxHeight) {
+      collapsibleContainer.style.maxHeight = null;
+    }
+    const nextCollapsible = document.getElementsByClassName(
+      'form_content_optionals'
+    )[0];
+    nextCollapsible.childNodes[1].style.maxHeight =
+      nextCollapsible.childNodes[1].scrollHeight + 'px';
+  };
+
+  const handleOptionalsSection = (e) => {
+    e.preventDefault();
+    const collapsibleContainer = e.target.parentElement;
+    if (collapsibleContainer.style.maxHeight) {
+      collapsibleContainer.style.maxHeight = null;
     }
   };
 
@@ -144,7 +206,16 @@ const PlayerForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await dispatch(createTeam({ teamName }));
+    await dispatch(
+      createTeam({
+        teamName,
+        sub1IGN,
+        sub2IGN,
+        coachIGN,
+        coachDiscord,
+        managerDiscord,
+      })
+    );
     await dispatch(
       addCaptain({
         captainFName,
@@ -215,6 +286,7 @@ const PlayerForm = () => {
                   placeholder="First Name"
                   name="fname"
                   onChange={(e) => setCaptainFName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -225,6 +297,7 @@ const PlayerForm = () => {
                   placeholder="Last Name"
                   name="lname"
                   onChange={(e) => setCaptainLName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -237,6 +310,7 @@ const PlayerForm = () => {
                   placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setCaptainInGameName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -247,6 +321,7 @@ const PlayerForm = () => {
                   placeholder="Rank"
                   name="rank"
                   onChange={(e) => setCaptainRank(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -257,6 +332,7 @@ const PlayerForm = () => {
                   placeholder="Discord (username#0000)"
                   name="discord"
                   onChange={(e) => setCaptainDiscord(e.target.value)}
+                  required
                 />
               </div>{' '}
               <div className="input_area">
@@ -267,6 +343,7 @@ const PlayerForm = () => {
                   placeholder="Team Name"
                   name="teamName"
                   onChange={(e) => setTeamName(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -274,7 +351,7 @@ const PlayerForm = () => {
               className="section_save_btn"
               onClick={handleCaptainSectionSave}
             >
-              SAVE
+              NEXT
             </button>
           </div>
         </div>
@@ -298,6 +375,7 @@ const PlayerForm = () => {
                   placeholder="First Name"
                   name="fname"
                   onChange={(e) => setP2FName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -308,6 +386,7 @@ const PlayerForm = () => {
                   placeholder="Last Name"
                   name="lname"
                   onChange={(e) => setP2LName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -318,6 +397,7 @@ const PlayerForm = () => {
                   placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setP2InGameName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -328,6 +408,7 @@ const PlayerForm = () => {
                   placeholder="Rank"
                   name="rank"
                   onChange={(e) => setP2Rank(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -335,7 +416,7 @@ const PlayerForm = () => {
               className="section_save_btn"
               onClick={handlePlayer2SectionSave}
             >
-              SAVE
+              NEXT
             </button>
           </div>
         </div>
@@ -359,6 +440,7 @@ const PlayerForm = () => {
                   placeholder="First Name"
                   name="fname"
                   onChange={(e) => setP3FName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -369,6 +451,7 @@ const PlayerForm = () => {
                   placeholder="Last Name"
                   name="lname"
                   onChange={(e) => setP3LName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -379,6 +462,7 @@ const PlayerForm = () => {
                   placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setP3InGameName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -389,6 +473,7 @@ const PlayerForm = () => {
                   placeholder="Rank"
                   name="rank"
                   onChange={(e) => setP3Rank(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -396,7 +481,7 @@ const PlayerForm = () => {
               className="section_save_btn"
               onClick={handlePlayer3SectionSave}
             >
-              SAVE
+              NEXT
             </button>
           </div>
         </div>
@@ -420,6 +505,7 @@ const PlayerForm = () => {
                   placeholder="First Name"
                   name="fname"
                   onChange={(e) => setP4FName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -430,6 +516,7 @@ const PlayerForm = () => {
                   placeholder="Last Name"
                   name="lname"
                   onChange={(e) => setP4LName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -440,6 +527,7 @@ const PlayerForm = () => {
                   placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setP4InGameName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -450,6 +538,7 @@ const PlayerForm = () => {
                   placeholder="Rank"
                   name="rank"
                   onChange={(e) => setP4Rank(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -457,7 +546,7 @@ const PlayerForm = () => {
               className="section_save_btn"
               onClick={handlePlayer4SectionSave}
             >
-              SAVE
+              NEXT
             </button>
           </div>
         </div>
@@ -481,6 +570,7 @@ const PlayerForm = () => {
                   placeholder="First Name"
                   name="fname"
                   onChange={(e) => setP5FName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -491,6 +581,7 @@ const PlayerForm = () => {
                   placeholder="Last Name"
                   name="lname"
                   onChange={(e) => setP5LName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -501,6 +592,7 @@ const PlayerForm = () => {
                   placeholder="IGN#0000"
                   name="ign"
                   onChange={(e) => setP5InGameName(e.target.value)}
+                  required
                 />
               </div>
               <div className="input_area">
@@ -511,6 +603,7 @@ const PlayerForm = () => {
                   placeholder="Rank"
                   name="rank"
                   onChange={(e) => setP5Rank(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -518,7 +611,73 @@ const PlayerForm = () => {
               className="section_save_btn"
               onClick={handlePlayer5SectionSave}
             >
-              SAVE
+              NEXT
+            </button>
+          </div>
+        </div>
+        {/* OPTIONALS */}
+        <div className="form_content_container form_content_optionals">
+          <button
+            ref={(el) => (ref.current[5] = el)}
+            className={`form_content_title ${
+              p5Completion ? 'complete active' : ''
+            }`}
+          >
+            Subs/Manager/Coach (optional)
+          </button>
+          <div className="form_content_collapsible">
+            <div className="form_content">
+              <div className="input_area">
+                <label htmlFor="sub1IGN">Sub 1 IGN</label>
+                <input
+                  type="text"
+                  placeholder="Sub 1 IGN#0000"
+                  name="sub1IGN"
+                  onChange={(e) => setSub1IGN(e.target.value)}
+                />
+              </div>
+              <div className="input_area">
+                <label htmlFor="sub2IGN">Sub 2 IGN</label>
+                <input
+                  type="text"
+                  placeholder="Sub 2 IGN#0000"
+                  name="sub2IGN"
+                  onChange={(e) => setSub2IGN(e.target.value)}
+                />
+              </div>
+              <div className="input_area">
+                <label htmlFor="coachIGN">Coach IGN</label>
+                <input
+                  type="text"
+                  placeholder="Coach IGN"
+                  name="coachIGN"
+                  onChange={(e) => setCoachIGN(e.target.value)}
+                />
+              </div>
+              <div className="input_area">
+                <label htmlFor="coachDisc">Coach Discord</label>
+                <input
+                  type="text"
+                  placeholder="Coach Discord#0000"
+                  name="coachDisc"
+                  onChange={(e) => setCoachDiscord(e.target.value)}
+                />
+              </div>
+              <div className="input_area">
+                <label htmlFor="mngrDisc">Manager Discord</label>
+                <input
+                  type="text"
+                  placeholder="Manager Discord#0000"
+                  name="mngrDisc"
+                  onChange={(e) => setManagerDiscord(e.target.value)}
+                />
+              </div>
+            </div>
+            <button
+              className="section_save_btn"
+              onClick={handleOptionalsSection}
+            >
+              NEXT
             </button>
           </div>
         </div>
@@ -619,7 +778,14 @@ const PlayerForm = () => {
           ''
         )}
       </form>
-      {isSubmitted ? <Modal setIsSubmitted={setIsSubmitted} /> : null}
+      {console.log(state.status)}
+      {isSubmitted ? (
+        state.status === 'REJECTED' ? (
+          <ModalError setIsSubmitted={setIsSubmitted} />
+        ) : (
+          <Modal setIsSubmitted={setIsSubmitted} />
+        )
+      ) : null}
     </>
   );
 };

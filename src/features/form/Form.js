@@ -60,10 +60,10 @@ const Form = () => {
           <p>Team Information</p>
         </div>
         <p>
-          Please be sure to SAVE after you complete a player's form AND whenever
-          you make a change to a field!<br></br>If you have any issues with this
-          form and cannot submit, please reach out to us at
-          help.alibiesports@gmail.com<br></br>
+          Please be sure go in order by starting with the Captain and clicking
+          NEXT after finishing a section!
+          <br></br>If you have any issues with this form and cannot submit,
+          please reach out to us at help.alibiesports@gmail.com<br></br>
           <strong>
             PLEASE AVOID REFRESHING THE PAGE WHILE FILLING OUT THE FORM.
           </strong>
