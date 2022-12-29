@@ -130,13 +130,6 @@ body {
   margin: 0 1.5rem;
 }
 
-@media only screen and (max-width: 1200px) {
-  .header_container img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
 /*
  *
  * FOOTER
@@ -249,7 +242,7 @@ body {
 }
 
 /* PRODUCTION ENVIRONMENT */
-#company_name span:nth-child(n + 1):nth-child(-n + 5) {
+/* #company_name span:nth-child(n + 1):nth-child(-n + 5) {
   color: var(--ACCENT-COLOR);
   animation-name: logo_glow_loop;
   animation-duration: 5s;
@@ -264,10 +257,10 @@ body {
   background: var(--BGCOLOR);
   color: var(--FONT-COLOR);
   animation: logo_loop 5s infinite;
-}
+} */
 
 /* FOR DEV ENVIRONMENT */
-/* #company_name span:nth-child(n + 1):nth-child(-n + 5) span {
+#company_name span:nth-child(n + 1):nth-child(-n + 5) span {
   color: var(--ACCENT-COLOR);
   animation-name: logo_glow_loop;
   animation-duration: 5s;
@@ -284,7 +277,7 @@ body {
   color: var(--FONT-COLOR);
   animation: logo_loop 5s infinite;
   animation-delay: -1;
-} */
+}
 
 @keyframes logo_loop {
   0% {
@@ -299,7 +292,7 @@ body {
 }
 
 /* PRODUCTION ENVIRONMENT */
-#company_name span:nth-child(1) {
+/* #company_name span:nth-child(1) {
   animation-delay: 0s;
 }
 
@@ -342,10 +335,10 @@ body {
 }
 #company_name span:nth-child(13) {
   animation-delay: 2.4s;
-}
+} */
 
 /* FOR DEV ENVIRONMENT */
-/* #company_name span:nth-child(1) span {
+#company_name span:nth-child(1) span {
   animation-delay: 0s;
 }
 
@@ -388,7 +381,7 @@ body {
 }
 #company_name span:nth-child(13) span {
   animation-delay: 2.4s;
-} */
+}
 
 @keyframes logo_glow_loop {
   0% {
@@ -558,6 +551,7 @@ hr {
   display: flex;
   flex-flow: column;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #252423;
   margin: 0 2rem;
   width: 20%;
@@ -1078,7 +1072,7 @@ hr {
   flex-flow: column;
   align-items: center;
   width: 65%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .tournament_header {
@@ -1160,4 +1154,52 @@ td {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1080px) {
+  .header_container img {
+    max-width: 80%;
+    height: auto;
+  }
+  #company_name {
+    font-size: 80px;
+  }
+  .public_main_content {
+    min-height: 80vh;
+  }
+  .section1_desc {
+    width: 100%;
+  }
+  .public_meet_the_team {
+    width: 70%;
+    height: auto;
+  }
+  .public_meet_the_team img {
+    width: 80%;
+    height: auto;
+  }
+  .founder_name {
+    font-size: 34px;
+  }
+  .section2_info {
+    flex-flow: column;
+  }
+  .tournament_info {
+    min-height: 80vh;
+  }
+  .container {
+    min-height: 80vh;
+  }
+  .section3_desc {
+    width: 60%;
+  }
+  .player_form {
+    width: 100%;
+  }
+  .form_content_container button {
+    font-size: 34px;
+  }
+  .checkbox_container_content label {
+    font-size: 24px;
+  }
 }
