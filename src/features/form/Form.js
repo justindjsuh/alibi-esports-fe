@@ -13,10 +13,16 @@ const Form = () => {
           January 5th at 5 p.m - 10 p.m. and January 6th at 5 p.m. - 12 a.m. If
           you do not respect this commitment, the organization may blacklist you
           for future opportunities.<br></br> <br></br>
-          <strong>THIS TOURNAMENT IS EXCLUSIVE TO MARGINALIZED GENDERS.</strong>
+          <strong>
+            THIS TOURNAMENT IS EXCLUSIVE TO MARGINALIZED GENDERS AND RANKS
+            PLATINUM+.
+          </strong>
           <br></br> <br></br>
           Registrations will be available until January 3rd at 8 p.m. <br></br>
-          The Invitational will be streamed on our twitch channel:
+          The entrance fee is $5 ($25 per team). Captains are expected to Venmo
+          the NON-REFUNDABLE entrance fee of $25 for the entire team to
+          @Choi-Gloria by JANUARY 3rd.<br></br>The Invitational will be streamed
+          on our twitch channel:
           <a
             href="https://www.twitch.tv/alibiesports"
             target="_blank"

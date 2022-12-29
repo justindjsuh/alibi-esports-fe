@@ -18,7 +18,7 @@ const Tournaments = () => {
               </p>
               <p>
                 <span>PRIZE POOL</span>
-                <br></br> $400 USD
+                <br></br> TBD
               </p>
               <p>
                 <span>REGION</span>
@@ -40,22 +40,22 @@ const Tournaments = () => {
             <tbody>
               <tr>
                 <td>1st</td>
-                <td>TBD</td>
+                <td>50%</td>
                 <td style={{ width: '600px' }}>TBD</td>
               </tr>
               <tr>
                 <td>2nd</td>
-                <td>TBD</td>
+                <td>30%</td>
                 <td style={{ width: '600px' }}>TBD</td>
               </tr>
               <tr>
                 <td>3rd - 4th</td>
-                <td>TBD</td>
+                <td>10%</td>
                 <td style={{ width: '600px' }}>TBD</td>
               </tr>
               <tr>
                 <td>3rd - 4th</td>
-                <td>TBD</td>
+                <td>10%</td>
                 <td style={{ width: '600px' }}>TBD</td>
               </tr>
               {/* <tr className='collapsed_row'>
