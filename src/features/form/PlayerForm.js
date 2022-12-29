@@ -778,7 +778,6 @@ const PlayerForm = () => {
           ''
         )}
       </form>
-      {console.log(state.status)}
       {isSubmitted ? (
         state.status === 'REJECTED' ? (
           <ModalError setIsSubmitted={setIsSubmitted} />
