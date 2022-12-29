@@ -771,7 +771,7 @@ const PlayerForm = () => {
         {state.status === 'LOADING' ? (
           <p className="loading_msg">
             We apologize for the inconvenience, we are experiencing a high
-            volume of registrations, which may delay submissions (~1-2mins).{' '}
+            volume of registrations, which may delay submissions (~30 seconds).{' '}
             <br></br>PLEASE DO NOT REFRESH OR EXIT THIS PAGE
           </p>
         ) : (
