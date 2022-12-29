@@ -242,7 +242,7 @@ body {
 }
 
 /* PRODUCTION ENVIRONMENT */
-/* #company_name span:nth-child(n + 1):nth-child(-n + 5) {
+#company_name span:nth-child(n + 1):nth-child(-n + 5) {
   color: var(--ACCENT-COLOR);
   animation-name: logo_glow_loop;
   animation-duration: 5s;
@@ -257,10 +257,10 @@ body {
   background: var(--BGCOLOR);
   color: var(--FONT-COLOR);
   animation: logo_loop 5s infinite;
-} */
+}
 
 /* FOR DEV ENVIRONMENT */
-#company_name span:nth-child(n + 1):nth-child(-n + 5) span {
+/* #company_name span:nth-child(n + 1):nth-child(-n + 5) span {
   color: var(--ACCENT-COLOR);
   animation-name: logo_glow_loop;
   animation-duration: 5s;
@@ -277,7 +277,7 @@ body {
   color: var(--FONT-COLOR);
   animation: logo_loop 5s infinite;
   animation-delay: -1;
-}
+} */
 
 @keyframes logo_loop {
   0% {
@@ -292,7 +292,7 @@ body {
 }
 
 /* PRODUCTION ENVIRONMENT */
-/* #company_name span:nth-child(1) {
+#company_name span:nth-child(1) {
   animation-delay: 0s;
 }
 
@@ -335,10 +335,10 @@ body {
 }
 #company_name span:nth-child(13) {
   animation-delay: 2.4s;
-} */
+}
 
 /* FOR DEV ENVIRONMENT */
-#company_name span:nth-child(1) span {
+/* #company_name span:nth-child(1) span {
   animation-delay: 0s;
 }
 
@@ -381,7 +381,7 @@ body {
 }
 #company_name span:nth-child(13) span {
   animation-delay: 2.4s;
-}
+} */
 
 @keyframes logo_glow_loop {
   0% {
