@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ParticipatingTeams from './ParticipatingTeams';
 
 const Tournaments = () => {
   useEffect(() => {
@@ -81,7 +82,7 @@ const Tournaments = () => {
             </tbody>
           </table>
         </div>
-        <p className="temp">MORE DETAILS TO COME SOON</p>
+        <ParticipatingTeams />
       </div>
     </div>
   );

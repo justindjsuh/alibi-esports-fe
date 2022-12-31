@@ -30,7 +30,6 @@ const Public = () => {
           <div id="company_name">ALIBIESPORTS</div>
           <div className="public_main_btns">
             <a href="#section1_top">WHO WE ARE</a>
-            {/* change this to contact href */}
             <Link to="/tournaments">Tournaments</Link>
           </div>
           <div className="public_quote_container">
