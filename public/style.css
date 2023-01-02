@@ -1118,11 +1118,23 @@ hr {
   color: rgb(182, 182, 182);
 }
 
-.table_title {
+.tourney_info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 65%;
+}
+
+.section_title {
   margin: 2rem 0 0.5rem 0;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 1px;
+  width: 100%;
+}
+
+.tournament_placement {
+  width: 100%;
 }
 
 .tournament_info td,
@@ -1145,6 +1157,14 @@ td {
   background-color: #848484;
 }
 
+.tournament_info td:nth-child(3) {
+  width: 100%;
+}
+
+.tournament_info td:nth-child(1) {
+  width: 20%;
+}
+
 .tournament_info table {
   width: 100%;
   display: block;
@@ -1152,15 +1172,26 @@ td {
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
+.participating_teams_section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+.temp {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 .all_teams_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 3rem;
   background-color: var(--BGCOLOR);
   padding: 1rem;
   gap: 1rem;
-  width: 70%;
+  width: 100%;
 }
 
 .team_container {
@@ -1213,7 +1244,9 @@ td {
   }
   .tournament_info {
     min-height: 80vh;
+    width: 100%;
   }
+
   .container {
     min-height: 80vh;
   }
@@ -1242,5 +1275,5 @@ td {
   background-color: var(--NEW-BG);
   display: flex;
   flex-flow: column;
-  gap: 5rem;
+  /* gap: 5rem; */
 }

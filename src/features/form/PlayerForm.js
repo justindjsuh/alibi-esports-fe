@@ -55,7 +55,14 @@ const PlayerForm = () => {
   const [p4Completion, setP4Completion] = useState(false);
   const [p5Completion, setP5Completion] = useState(false);
 
+  const [check1Completion, setCheck1Completion] = useState(false);
+  const [check2Completion, setCheck2Completion] = useState(false);
+  const [check3Completion, setCheck3Completion] = useState(false);
+  const [check4Completion, setCheck4Completion] = useState(false);
+
   const [formCompletion, setFormCompletion] = useState(false);
+
+  const [submitDisabled, setSubmitDisabled] = useState(true);
 
   // for giving a confirmation of submission screen
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -193,16 +200,70 @@ const PlayerForm = () => {
   };
 
   const handleCheck = () => {
+    setCheck1Completion(!check1Completion);
     if (
       capCompletion &&
       p2Completion &&
       p3Completion &&
       p4Completion &&
       p5Completion
+      // check1Completion &&
+      // check2Completion &&
+      // check3Completion &&
+      // check4Completion
     ) {
       setFormCompletion(true);
     } else setFormCompletion(false);
   };
+  // const handleCheck2 = () => {
+  //   setCheck2Completion(!check2Completion);
+  //   if (
+  //     capCompletion &&
+  //     p2Completion &&
+  //     p3Completion &&
+  //     p4Completion &&
+  //     p5Completion &&
+  //     check1Completion &&
+  //     check2Completion &&
+  //     check3Completion &&
+  //     check4Completion
+  //   ) {
+  //     setFormCompletion(true);
+  //   } else setFormCompletion(false);
+  // };
+  // const handleCheck3 = () => {
+  //   setCheck3Completion(!check3Completion);
+  //   if (
+  //     capCompletion &&
+  //     p2Completion &&
+  //     p3Completion &&
+  //     p4Completion &&
+  //     p5Completion &&
+  //     check1Completion &&
+  //     check2Completion &&
+  //     check3Completion &&
+  //     check4Completion
+  //   ) {
+  //     setFormCompletion(true);
+  //   } else setFormCompletion(false);
+  // };
+  // const handleCheck4 = () => {
+  //   setCheck4Completion(!check4Completion);
+  //   if (
+  //     capCompletion &&
+  //     p2Completion &&
+  //     p3Completion &&
+  //     p4Completion &&
+  //     p5Completion &&
+  //     check1Completion &&
+  //     check2Completion &&
+  //     check3Completion &&
+  //     check4Completion
+  //   ) {
+  //     console.log('FWEHOFWEIOEFOIOHIEFOHIEF');
+  //     setFormCompletion(true);
+  //   } else setFormCompletion(false);
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -746,13 +807,15 @@ const PlayerForm = () => {
               required
             ></input>
             <label>
-              I herby state that I am the Captain of the team members whose
-              names are listed in the registration form above. On behalf of the
-              team who has given me permission, I, the captain, am accepting the
-              terms of the wavier <strong>as well as</strong> all of the
-              previous statements on their and my behalf by marking this
+              I herby state that I am the representative of the team members
+              whose names are listed in the registration form above. On behalf
+              of the team who has given me permission, I, the representative, am
+              accepting the terms of the wavier <strong>as well as</strong> all
+              of the previous statements on their and my behalf by marking this
               checkbox and warranting that they and I fully understand its
-              contents.
+              contents. If there are minors on the team, they have been given
+              consent by a parent or legal guardian to agree to all of the
+              statements listed above.
             </label>
           </div>
         </div>

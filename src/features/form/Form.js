@@ -55,7 +55,7 @@ const Form = () => {
           our discord.
           <br></br>
           <br></br>If you any further questions, please reach out to an admin
-          via our Discord, or contact us at help.alibiesports@gmail.com{' '}
+          via our Discord.
           <br></br>
           <strong>
             This competition is not affiliated with or sponsored by Riot Games,
@@ -69,7 +69,7 @@ const Form = () => {
           Please be sure go in order by starting with the Captain and clicking
           NEXT after finishing a section!
           <br></br>If you have any issues with this form and cannot submit,
-          please reach out to us at help.alibiesports@gmail.com<br></br>
+          please reach out to an admin on our Discord.<br></br>
           <strong>
             PLEASE AVOID REFRESHING THE PAGE WHILE FILLING OUT THE FORM.
           </strong>
