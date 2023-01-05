@@ -253,7 +253,7 @@ body {
   text-align: center;
   padding: 0 0.5rem;
   margin: 0 0.3rem;
-  background: var(--BGCOLOR);
+  background: rgb(33, 33, 33);
   color: var(--FONT-COLOR);
   animation: logo_loop 5s infinite;
 }
