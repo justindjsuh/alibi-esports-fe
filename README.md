@@ -2,9 +2,10 @@
 
 # Alibi Esports [![website - Peak](https://img.shields.io/badge/Website-AlibiEsports-03DAC5)](https://alibi-esports.onrender.com/ "Visit our website")
 
-[![Made with JavaScript](https://img.shields.io/badge/Made_with-JavaScript-yellow?logo=javascript&logoColor=white)](https://www.javascript.com/ "Go to JavaScript homepage")
-[![Made with Node.js](https://img.shields.io/badge/Node.js->=16-2ea44f?logo=node.js&logoColor=white)](https://nodejs.org "Go to Node.js homepage")
-[![Made with React](https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white)](https://reactjs.org "Go to React homepage")
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 [Features](#features) •
 [Screenshots](#screenshots) •
@@ -17,10 +18,10 @@
 
 This website serves as a medium for the esports organization, Alibi Esports, and their player base. The organization reaches out to communities and provides them with a competitive outlet for trending games. 
 
-- Keep track of
-- test
-- testst
-- tsetset
+- An all-in-one platform for the organization and players to exchange information
+- There is a scrollable landing page that explains what the company is about and what they strive to achieve through this organization
+- Players can sign up for tournaments via the Register button, where they can input all of their team information including up to five players, a coach, a manager, and two subs.
+- Players are also able to browser previous and upcoming tournaments on the tournaments page where the participating teams and final placements are displayed
 
 ## Screenshots
 
