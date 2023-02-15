@@ -1,6 +1,6 @@
 <div align="center">
 
-# Alibi Esports ![Alibi Esports](https://img.shields.io/badge/alibi-esports%20ci-%23181717.svg?style=for-the-badge)
+# Alibi Esports ![Alibi Esports](https://img.shields.io/badge/alibi%20esports-%23181717.svg?style=for-the-badge)
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
