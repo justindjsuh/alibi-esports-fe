@@ -59,7 +59,16 @@ This website serves as a medium for the esports organization, Alibi Esports, and
 
 ## Lessons Learned
 <p>
+One of the first things one might ask when checking out this repo is, "Why is the frontend and backend split?"
+Now there are two main reasons for that.
+1. I had no idea how to combine the two into one deployment (I do now)
+2. That conveniently let me avoid the spin down time on Render's deployment for web services on initial load. So, loading up the page doesn't take 30+ seconds, but a request (like a team registration) will require the backend to spin back up. More on this in my learn more section!
+</p>
+<p>
 As my first website put into production and the sole developer of this project, there were a lot of obstacles I had to overcome to get this site to work. One of the biggest difficulties I'd like to talk about is developing with responsive web design in mind. I was still getting the hang of the front end technology (HTML & CSS) and found myself having trouble accounting for smaller screen sizes. 
+</p>
+<p>
+Another quick lesson I learned, was that there are many great deployment websites that I can use for free fullstack project deployments. I had a bit of an issue with Render, because any web services will spin down after 15 minutes of inactivity. Once a request comes in, the web service has to do what's called a "cold start" and spin back up which can take upwards of 30 seconds. Sites like Netlify, Vercel, and Cyclic are all options I will consider in the future as I continue to develop websites. 
 </p>
 <p>
 Through a lot of Googling and looking at a ton of Stack Overflow posts, I was able to learn an insane amount in the short timespan of this project. This website was created for an organization and the deadline was in less than a week's time. While the timespan was short, this project logged me upwards of 80+ hours where I learned how to handle obstacles like, CSS animations, React useState hell (form handling for 7+ people and 4-6 fields each in a single form is no joke!), Express custom middleware (loggers and error handlers), and overall mainly improving my front end development skills.
