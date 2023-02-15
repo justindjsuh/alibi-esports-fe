@@ -15,7 +15,6 @@
 
 ## Features
 
-<hr/>
 This website serves as a medium for the esports organization, Alibi Esports, and their player base. The organization reaches out to communities and provides them with a competitive outlet for trending games. 
 
 - Keep track of
@@ -25,7 +24,6 @@ This website serves as a medium for the esports organization, Alibi Esports, and
 
 ## Screenshots
 
-<hr />
 <h3 align="center">Landing Page<h3>
 
 <p align="center">
