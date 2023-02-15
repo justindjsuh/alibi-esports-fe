@@ -58,6 +58,12 @@ This website serves as a medium for the esports organization, Alibi Esports, and
 | Letterize.js      | <https://github.com/WojciechKrakowiak/letterize/>         |
 
 ## Lessons Learned
+<p>
 As my first website put into production, there were a lot of obstacles I had to overcome to get this site to work. One of the biggest difficulties I'd like to talk about is developing with responsive web design in mind. I was still getting the hang of the front end technology (HTML & CSS) and found myself having trouble accounting for smaller screen sizes. 
+</p>
+<p>
 Through a lot of Googling and looking at a ton of Stack Overflow posts, I was able to learn an insane amount in the short timespan of this project. This website was created for an organization and the deadline was in less than a week's time. While the timespan was short, this project logged me upwards of 80+ hours where I learned how to handle obstacles like, CSS animations, React useState hell, Express custom middleware (loggers and error handlers), and overall mainly improving my front end developer skills.
+</p>
+<p>
 Is this the best I can do? Absolutely not. I already feel like I could immensely improve countless things, but as my first step into professional web development, I will definitely look back on this fondly as I continue to improve my skills.
+</p>
