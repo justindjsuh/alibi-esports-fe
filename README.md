@@ -9,7 +9,7 @@
 
 [Features](#features) •
 [Screenshots](#screenshots) •
-[Technology](#technology) •
+[Tech Stack](#tech stack) •
 [Packages](#packages)
 
 </div>
@@ -38,7 +38,7 @@ This website serves as a medium for the esports organization, Alibi Esports, and
 </p>
 
 
-## Technology
+## Tech Stack
 
 | Tech Name  | Home Page               |
 | ---------- | ----------------------- |
