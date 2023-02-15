@@ -23,6 +23,13 @@ This website serves as a medium for the esports organization, Alibi Esports, and
 - Players can sign up for tournaments via the Register button, where they can input all of their team information including up to five players, a coach, a manager, and two subs.
 - Players are also able to browser previous and upcoming tournaments on the tournaments page where the participating teams and final placements are displayed
 
+## Landing Demo
+
+<p align="center">
+    <img src="/images/landing-gif.gif" width="738" />
+</p>
+
+
 ## Screenshots
 
 <h3 align="center">Landing Page<h3>
