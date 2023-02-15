@@ -28,13 +28,13 @@ This website serves as a medium for the esports organization, Alibi Esports, and
 <h3 align="center">Landing Page<h3>
 
 <p align="center">
-    <img src="./images/homepage.png" alt="alibi esports landing page" width="738">
+    <img src="./images/alibiesports_landing.PNG" alt="alibi esports landing page" width="738">
 </p>
 
 <h3 align="center">Team Registration Page<h3>
 
 <p align="center">
-    <img src="./images/team-registration.png" alt="alibi esports form page" width="738">
+    <img src="./images/alibiesports_forms.PNG" alt="alibi esports form page" width="738">
 </p>
 
 
