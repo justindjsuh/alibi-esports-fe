@@ -9,7 +9,7 @@
 [Features](#features) •
 [Screenshots](#screenshots) •
 [Technology](#technology) •
-[Packages](#packages) •
+[Packages](#packages)
 
 </div>
 
